@@ -16,34 +16,18 @@ namespace StaffPanel
 {
     public sealed partial class MainWindow : Window
     {
-        static string connectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=test;";
         static string query = "SELECT * FROM test";
         public MainWindow()
         {
             this.InitializeComponent();
-            MySqlConnection databaseConnection = new MySqlConnection(connectionString);
-            MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
-            commandDatabase.CommandTimeout = 500;
-            
-            try
+        }
+
+        private void myButton_Click(object sender, RoutedEventArgs e)
+        {
+            using var reader = StaffPanel.SQL.Query.MakeQuery("SELECT * FROM `users`;");
+            while (reader.Read())
             {
-                databaseConnection.Open();
-
-                MySqlDataReader reader = commandDatabase.ExecuteReader();
-
-                if (reader.HasRows)
-                {
-                    while (reader.Read())
-                    {
-                        myButton.Content = reader.GetString(0);
-                    }
-                }
-
-                databaseConnection.Close();
-            }
-            catch(Exception error)
-            {
-                MessageBox.Show(error.ToString());
+                myButton.Content = "" + reader["identifier"].ToString() + reader["accounts"].ToString() + reader["group"].ToString() + reader["job"].ToString();
             }
         }
     }

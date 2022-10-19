@@ -9,7 +9,7 @@
 
     <NavigationView x:Name="nvSample">
         <NavigationView.MenuItems>
-            <Button Content="HOLA" x:Name="myButton"></Button>
+            <Button Content="HOLA" x:Name="myButton" Click="myButton_Click"></Button>
             <NavigationViewItem Icon="Play" Content="Dashboard" Tag="SamplePage1" />
             <NavigationViewItem Icon="Save" Content="Ban list" Tag="SamplePage2" />
             <NavigationViewItem Icon="Save" Content="Search User" Tag="SamplePage2" />

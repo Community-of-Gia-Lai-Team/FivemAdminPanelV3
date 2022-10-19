@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "StaffPanel (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "StaffPanel (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

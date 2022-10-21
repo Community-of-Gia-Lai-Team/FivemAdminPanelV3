@@ -1,0 +1,48 @@
+<div class="pb-10 pb-lg-15">
+  <h2 class="fw-bolder text-dark">Account Info</h2>
+  <div class="text-gray-400 fw-bold fs-6">
+    If you need more info, please check out
+    <a href="#" class="link-primary fw-bolder"> Help Page</a>.
+  </div>
+</div>
+<div [formGroup]="form">
+  <div class="mb-10 fv-row">
+    <label class="form-label mb-3 required">Database Server</label
+    ><input
+      formControlName="accountName"
+      type="text"
+      class="form-control form-control-lg form-control-solid"
+      placeholder="127.0.0.1"
+    />
+    <div
+      *ngIf="
+        form.get('accountName')?.hasError('required') &&
+        form.get('accountName')?.touched
+      "
+      class="fv-plugins-message-container invalid-feedback"
+    >
+      Database server is required
+    </div>
+  </div>
+  
+  <div class="mb-10 fv-row">
+    <label class="form-label mb-3 required">Database Port</label
+    ><input
+      formControlName="accountName"
+      type="text"
+      class="form-control form-control-lg form-control-solid"
+      placeholder="3306"
+    />
+    <div
+      *ngIf="
+        form.get('accountName')?.hasError('required') &&
+        form.get('accountName')?.touched
+      "
+      class="fv-plugins-message-container invalid-feedback"
+    >
+      Database port is required
+    </div>
+  </div>
+
+  
+</div>

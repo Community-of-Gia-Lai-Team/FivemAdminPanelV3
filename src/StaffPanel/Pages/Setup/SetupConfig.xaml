@@ -1,0 +1,58 @@
+﻿<Page
+    x:Class="StaffPanel.Pages.SetupConfig"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:StaffPanel.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid >
+        <Grid.Background>
+            <ImageBrush ImageSource="C:/Users/danid/Downloads/BG-Wizard.jpg"></ImageBrush>
+        </Grid.Background>
+
+        <StackPanel Background="{ThemeResource SystemControlAcrylicElementBrush}">
+            <StackPanel Margin="50 50 0 0">
+                <TextBlock Text="Panel Configuration Page" FontFamily="Core Sans" FontSize="30"></TextBlock>
+                <TextBlock Text="To use all these great features and more, you need to log in first." Foreground="Gray" FontFamily="Core Sans" Margin="0 7" FontSize="15"></TextBlock>
+            </StackPanel>
+
+            <Border Margin="0 50 0 0" MaxWidth="600" Height="600" BorderThickness="6" BorderBrush="#2e2d2d" Background="#2e2d2d" CornerRadius="10">
+                <StackPanel Margin="20 20 20 20" HorizontalAlignment="Center" Background="#2e2d2d">
+                    <!--<TextBlock Text="Configuration" FontFamily="Core Sans" FontSize="30" Margin="0 0 0 50"></TextBlock>
+                    <RadioButtons x:Name="SelectedFramework" SelectedIndex="0"  MaxColumns="3" Header="Framework">
+                        <x:String>ESX</x:String>
+                        <x:String>QBus</x:String>
+                        <x:String>Other</x:String>
+                    </RadioButtons>
+
+                    <RadioButtons x:Name="RconEnabled" SelectedIndex="0" Margin="0 40 0 0"  MaxColumns="2" Header="RCON">
+                        <x:String>Enabled</x:String>
+                        <x:String>Disabled</x:String>
+                    </RadioButtons>
+
+                    <RadioButtons x:Name="FtpEnabled" SelectedIndex="0" Margin="0 40 0 0"  MaxColumns="2" Header="FTP">
+                        <x:String>Enabled</x:String>
+                        <x:String>Disabled</x:String>
+                    </RadioButtons>
+
+                    <RadioButtons x:Name="LiveConsole" SelectedIndex="0" Margin="0 40 0 0"  MaxColumns="2" Header="Live Console">
+                        <x:String>Enabled</x:String>
+                        <x:String>Disabled</x:String>
+                    </RadioButtons>
+
+                    <Button Style="{StaticResource AccentButtonStyle}" HorizontalAlignment="Center" Margin="0 40 0 0" Content="Continue" />
+
+                    <ProgressBar IsIndeterminate="True" Margin="0 20 0 0" ShowPaused="False" ShowError="False" />-->
+
+                    <TextBlock Text="Permissions" FontFamily="Core Sans" FontSize="30" Margin="0 0 0 50"></TextBlock>
+
+                    <TextBox AutomationProperties.Name="simple TextBox"/>
+                    <Button Content="Standard XAML button" Click="Button_Click" />
+                </StackPanel>
+            </Border>
+        </StackPanel>
+    </Grid>
+</Page>

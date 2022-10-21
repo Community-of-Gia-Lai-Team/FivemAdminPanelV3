@@ -7,26 +7,38 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <NavigationView x:Name="nvSample">
-        <NavigationView.MenuItems>
-            <Button Content="HOLA" x:Name="myButton" Click="myButton_Click"></Button>
-            <NavigationViewItem Icon="Play" Content="Dashboard" Tag="SamplePage1" />
-            <NavigationViewItem Icon="Save" Content="Ban list" Tag="SamplePage2" />
-            <NavigationViewItem Icon="Save" Content="Search User" Tag="SamplePage2" />
-            <NavigationViewItem Icon="Save" Content="Search HEX" Tag="SamplePage2" />
-            <NavigationViewItem Icon="Save" Content="Mafia" Tag="SamplePage2" />
-            <NavigationViewItem Icon="Save" Content="Band" Tag="SamplePage2" />
-            <NavigationViewItem Icon="Save" Content="Staff List" Tag="SamplePage2" />
-            <NavigationViewItem Icon="Save" Content="API Logs" Tag="SamplePage2" />
-            <NavigationViewItem Icon="Save" Content="Staff Logs" Tag="SamplePage2" />
-            <NavigationViewItem Icon="Save" Content="User Logs" Tag="SamplePage2" />
-            <NavigationViewItem Icon="Save" Content="Live Console" Tag="SamplePage2" />
-            <NavigationViewItem Icon="Save" Content="Resource List" Tag="SamplePage2" />
-            <NavigationViewItem Icon="Save" Content="CFG Editor" Tag="SamplePage2" />
-            <NavigationViewItem Icon="Save" Content="Database Viewer" Tag="SamplePage2" />
-            <NavigationViewItem Icon="Save" Content="Performance" Tag="SamplePage2" />
-            <NavigationViewItem Icon="Calculator" Content="RCON Commands" Tag="SamplePage2" />
-        </NavigationView.MenuItems>
-              <Frame x:Name="contentFrame"/>
-    </NavigationView>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="C:/Users/danid/Downloads/BG-Wizard.jpg"></ImageBrush>
+        </Grid.Background>
+        <!--<NavigationView x:Name="nvSample">
+            <NavigationView.MenuItems>
+                <NavigationViewItem Icon="Play" Content="Dashboard" Tag="SamplePage1" />
+                <NavigationViewItem Icon="Save" Content="Ban list" Tag="SamplePage2" />
+                <NavigationViewItem Icon="Save" Content="Search User" Tag="SamplePage2" />
+                <NavigationViewItem Icon="Save" Content="Search HEX" Tag="SamplePage2" />
+                <NavigationViewItem Icon="Save" Content="Mafia" Tag="SamplePage2" />
+                <NavigationViewItem Icon="Save" Content="Band" Tag="SamplePage2" />
+                <NavigationViewItem Icon="Save" Content="Staff List" Tag="SamplePage2" />
+                <NavigationViewItem Icon="Save" Content="API Logs" Tag="SamplePage2" />
+                <NavigationViewItem Icon="Save" Content="Staff Logs" Tag="SamplePage2" />
+                <NavigationViewItem Icon="Save" Content="User Logs" Tag="SamplePage2" />
+                <NavigationViewItem Icon="Save" Content="Live Console" Tag="SamplePage2" />
+                <NavigationViewItem Icon="Save" Content="Resource List" Tag="SamplePage2" />
+                <NavigationViewItem Icon="Save" Content="CFG Editor" Tag="SamplePage2" />
+                <NavigationViewItem Icon="Save" Content="Database Viewer" Tag="SamplePage2" />
+                <NavigationViewItem Icon="Save" Content="Performance" Tag="SamplePage2" />
+                <NavigationViewItem Icon="Calculator" Content="RCON Commands" Tag="SamplePage2" />
+            </NavigationView.MenuItems>
+                <Frame x:Name="contentFrame"/>
+        </NavigationView>-->
+        <Button Content="HOLA" x:Name="myButton" Click="myButton_Click"></Button>
+        <Frame x:Name="MainFrame">
+            <Frame.ContentTransitions>
+                <TransitionCollection>
+                    <NavigationThemeTransition  />
+                </TransitionCollection>
+            </Frame.ContentTransitions>
+        </Frame>
+    </Grid>
 </Window>

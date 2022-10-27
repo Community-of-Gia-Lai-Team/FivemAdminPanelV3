@@ -22,12 +22,30 @@ function CreateToken(username, password, permission){
     //console.log(GenerateTokenHash({"username": username, "password": password, "permissions": permission}));
 }
 
-function ValidateToken(){
-
+const ValidateToken = function(token){
+    return new Promise(function(resolve, reject){
+        sqlFunctions.makeQuery(`SELECT ID FROM panel_users WHERE Token='${token}'`).then(data => {
+            resolve(data.result.length > 0)
+        })
+    });
 }
 
 function RemoveToken(){
 
 }
 
-module.exports = { CreateToken }
+// function GetDataFromToken(token){
+//     sqlFunctions.makeQuery(`SELECT * FROM panel_users WHERE Token='${token}'`).then(data => {
+//         return data.result[0]
+//     })
+// }
+
+const GetDataFromToken = function(token){
+    return new Promise(function(resolve, reject){
+        sqlFunctions.makeQuery(`SELECT * FROM panel_users WHERE Token='${token}'`).then(data => {
+            resolve(data.result)
+        })
+    });
+}
+
+module.exports = { CreateToken, ValidateToken, RemoveToken, GetDataFromToken }

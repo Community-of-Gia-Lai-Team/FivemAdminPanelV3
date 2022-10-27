@@ -11,4 +11,24 @@ const makeQuery = function(query){
     });
 }
 
-module.exports = { makeQuery };
+const checkDatabase = function(credentials){
+    return new Promise(function(resolve, reject){
+        console.log(credentials);
+        const conn = mysql.createConnection({
+            host: credentials.host,
+            user: credentials.user,
+            password: credentials.password,
+            database: credentials.name,
+            port: credentials.port
+        });
+        conn.connect(function(err) {
+            if(err) {
+                reject(false);
+                return;
+            }
+            resolve(true);
+        })
+    });
+}
+
+module.exports = { makeQuery, checkDatabase };

@@ -4,7 +4,9 @@ const app = express();
 const morgan = require('morgan');
 const mdw = require('./middleware/ValidateSession.js');
 const config = require('../Config.json');
+const rcon = require('./rcon/functions.js');
 const colors = require('colors');
+const cors = require('cors');
 
 //settings
 app.set('json spaces', 2);
@@ -14,10 +16,14 @@ app.use(morgan('dev'));
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 app.use(cookieParser())
-app.use(mdw({ option1: '1', option2: '2' }))
+app.use(mdw())
+app.use(cors({
+    origin: '*'
+}));
 
 //routes
 app.use('/api/', require('./routes/routes.js'));
+app.use('/api/setup/', require('./routes/setup.js'));
 
 //start the api server
 app.listen(config[0].ApiPort, () => {

@@ -1,0 +1,14 @@
+[{
+    "UnableToConnectToSQL": 0,
+    "UnableToFindCookie": 1,
+    "UnvalidCookie": 2,
+    "CantMakeSetupTwice": 3,
+    "IncorrectFrameworkSelected": 4,
+    "UnknownErrorCode": 5,
+    "CantConnectToDB": 6,
+    "InvalidDBCredentials": 7,
+    "CantConnectToRcon": 8,
+    "RconInvalidPassword": 9,
+    "InvalidRconCredentials": 10,
+    "CantConnectToFtp": 11
+}]

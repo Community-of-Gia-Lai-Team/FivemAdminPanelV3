@@ -1,336 +1,525 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head><base href="../../">
-		<title>Metronic - the world's #1 selling Bootstrap Admin Theme Ecosystem for HTML, Vue, React, Angular &amp; Laravel by Keenthemes</title>
-		<meta charset="utf-8" />
-		<meta name="description" content="The most advanced Bootstrap Admin Theme on Themeforest trusted by 94,000 beginners and professionals. Multi-demo, Dark Mode, RTL support and complete React, Angular, Vue &amp; Laravel versions. Grab your copy now and get life-time updates for free." />
-		<meta name="keywords" content="Metronic, bootstrap, bootstrap 5, Angular, VueJs, React, Laravel, admin themes, web design, figma, web development, free templates, free admin themes, bootstrap theme, bootstrap template, bootstrap dashboard, bootstrap dak mode, bootstrap button, bootstrap datepicker, bootstrap timepicker, fullcalendar, datatables, flaticon" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta property="og:locale" content="en_US" />
-		<meta property="og:type" content="article" />
-		<meta property="og:title" content="Metronic - Bootstrap 5 HTML, VueJS, React, Angular &amp; Laravel Admin Dashboard Theme" />
-		<meta property="og:url" content="https://keenthemes.com/metronic" />
-		<meta property="og:site_name" content="Keenthemes | Metronic" />
-		<link rel="canonical" href="https://preview.keenthemes.com/metronic8" />
-		<link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
-		<link href="assets/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
-		<link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
-		<link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
-		<link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
-	</head>
-	<body id="kt_body" style="background: url(./assets/media/bg5.jpg) no-repeat center center fixed;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;backdrop-filter: blur(13px);" class="header-fixed header-tablet-and-mobile-fixed toolbar-enabled toolbar-fixed aside-enabled aside-fixed">
-		<div class="d-flex flex-column flex-root">
-			<div class="page d-flex flex-row flex-column-fluid">
-				
-				<div class="wrapper d-flex flex-column flex-row-fluid" id="kt_wrapper">
-					
-					
-					<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
-						<div id="kt_content_container" class="container-xxl">
-							<div class="stepper stepper-pills stepper-column d-flex flex-column flex-xl-row flex-row-fluid" id="kt_create_account_stepper">
-								<div class="card d-flex justify-content-center justify-content-xl-start flex-row-auto w-100 w-xl-300px w-xxl-400px me-9">
-									<div class="card-body px-6 px-lg-10 px-xxl-15 py-20">
-										<div class="stepper-nav">
-											<div class="stepper-item current animate__animated" id="serverFrameworkPrg" data-kt-stepper-element="nav">
-												<div class="stepper-line w-40px"></div>
-												<div class="stepper-icon w-40px h-40px">
-													<i class="stepper-check fas fa-check"></i>
-													<span class="stepper-number">1</span>
-												</div>
-												<div class="stepper-label">
-													<h3 class="stepper-title">Server Framework</h3>
-													<div class="stepper-desc fw-bold">Setup Your Server Framework</div>
+
+<head>
+	<base href="../../">
+	<title>Metronic - the world's #1 selling Bootstrap Admin Theme Ecosystem for HTML, Vue, React, Angular &amp; Laravel
+		by Keenthemes</title>
+	<meta charset="utf-8" />
+	<meta name="description"
+		content="The most advanced Bootstrap Admin Theme on Themeforest trusted by 94,000 beginners and professionals. Multi-demo, Dark Mode, RTL support and complete React, Angular, Vue &amp; Laravel versions. Grab your copy now and get life-time updates for free." />
+	<meta name="keywords"
+		content="Metronic, bootstrap, bootstrap 5, Angular, VueJs, React, Laravel, admin themes, web design, figma, web development, free templates, free admin themes, bootstrap theme, bootstrap template, bootstrap dashboard, bootstrap dak mode, bootstrap button, bootstrap datepicker, bootstrap timepicker, fullcalendar, datatables, flaticon" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title"
+		content="Metronic - Bootstrap 5 HTML, VueJS, React, Angular &amp; Laravel Admin Dashboard Theme" />
+	<meta property="og:url" content="https://keenthemes.com/metronic" />
+	<meta property="og:site_name" content="Keenthemes | Metronic" />
+	<link rel="canonical" href="https://preview.keenthemes.com/metronic8" />
+	<link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
+	<link href="assets/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
+	<link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body id="kt_body"
+	style="background: url(./assets/media/bg5.jpg) no-repeat center center fixed;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;backdrop-filter: blur(13px);"
+	class="header-fixed header-tablet-and-mobile-fixed toolbar-enabled toolbar-fixed aside-enabled aside-fixed">
+	<div class="d-flex flex-column flex-root">
+		<div class="page d-flex flex-row flex-column-fluid">
+
+			<div class="wrapper d-flex flex-column flex-row-fluid" id="kt_wrapper">
+
+
+				<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+					<div id="kt_content_container" class="container-xxl">
+						<div class="stepper stepper-pills stepper-column d-flex flex-column flex-xl-row flex-row-fluid"
+							id="kt_create_account_stepper">
+							<div
+							id="panelLeft"	class="card d-flex justify-content-center justify-content-xl-start flex-row-auto w-100 w-xl-300px w-xxl-400px me-9">
+								<div class="card-body px-6 px-lg-10 px-xxl-15 py-20">
+									<div class="stepper-nav">
+										<div class="stepper-item current animate__animated" id="serverFrameworkPrg"
+											data-kt-stepper-element="nav">
+											<div class="stepper-line w-40px"></div>
+											<div class="stepper-icon w-40px h-40px">
+												<i class="stepper-check fas fa-check"></i>
+												<span class="stepper-number">1</span>
+											</div>
+											<div class="stepper-label">
+												<h3 class="stepper-title">Server Framework</h3>
+												<div class="stepper-desc fw-bold">Setup Your Server Framework</div>
+											</div>
+										</div>
+										<div class="stepper-item animate__animated" data-kt-stepper-element="nav"
+											id="databaseSettingsPrg">
+											<div class="stepper-line w-40px"></div>
+											<div class="stepper-icon w-40px h-40px">
+												<i class="stepper-check fas fa-check"></i>
+												<span class="stepper-number">2</span>
+											</div>
+											<div class="stepper-label">
+												<h3 class="stepper-title">Database Settings</h3>
+												<div class="stepper-desc fw-bold">Setup Your Database Credentials</div>
+											</div>
+										</div>
+										<div class="stepper-item" data-kt-stepper-element="nav" id="rconCredentialsPrg">
+											<div class="stepper-line w-40px"></div>
+											<div class="stepper-icon w-40px h-40px">
+												<i class="stepper-check fas fa-check"></i>
+												<span class="stepper-number">3</span>
+											</div>
+											<div class="stepper-label">
+												<h3 class="stepper-title">RCON Credentials</h3>
+												<div class="stepper-desc fw-bold">Setup your API connection with RCON
 												</div>
 											</div>
-											<div class="stepper-item animate__animated" data-kt-stepper-element="nav" id="databaseSettingsPrg">
-												<div class="stepper-line w-40px"></div>
-												<div class="stepper-icon w-40px h-40px">
-													<i class="stepper-check fas fa-check"></i>
-													<span class="stepper-number">2</span>
-												</div>
-												<div class="stepper-label">
-													<h3 class="stepper-title">Database Settings</h3>
-													<div class="stepper-desc fw-bold">Setup Your Database Credentials</div>
-												</div>
+										</div>
+										<div class="stepper-item" data-kt-stepper-element="nav" id="ftpCredentialsPrg">
+											<div class="stepper-line w-40px"></div>
+											<div class="stepper-icon w-40px h-40px">
+												<i class="stepper-check fas fa-check"></i>
+												<span class="stepper-number">4</span>
 											</div>
-											<div class="stepper-item" data-kt-stepper-element="nav" id="rconCredentialsPrg">
-												<div class="stepper-line w-40px"></div>
-												<div class="stepper-icon w-40px h-40px">
-													<i class="stepper-check fas fa-check"></i>
-													<span class="stepper-number">3</span>
-												</div>
-												<div class="stepper-label">
-													<h3 class="stepper-title">RCON Credentials</h3>
-													<div class="stepper-desc fw-bold">Setup your API connection with RCON</div>
-												</div>
+											<div class="stepper-label">
+												<h3 class="stepper-title">FTP Credentials</h3>
+												<div class="stepper-desc fw-bold">Set Your FTP credentials</div>
 											</div>
-											<div class="stepper-item" data-kt-stepper-element="nav" id="ftpCredentialsPrg">
-												<div class="stepper-line w-40px"></div>
-												<div class="stepper-icon w-40px h-40px">
-													<i class="stepper-check fas fa-check"></i>
-													<span class="stepper-number">4</span>
-												</div>
-												<div class="stepper-label">
-													<h3 class="stepper-title">FTP Credentials</h3>
-													<div class="stepper-desc fw-bold">Set Your FTP credentials</div>
-												</div>
+										</div>
+										<div class="stepper-item" data-kt-stepper-element="nav" id="completedWizardPrg">
+											<div class="stepper-line w-40px"></div>
+											<div class="stepper-icon w-40px h-40px">
+												<i class="stepper-check fas fa-check"></i>
+												<span class="stepper-number">5</span>
 											</div>
-											<div class="stepper-item" data-kt-stepper-element="nav" id="completedWizardPrg">
-												<div class="stepper-line w-40px"></div>
-												<div class="stepper-icon w-40px h-40px">
-													<i class="stepper-check fas fa-check"></i>
-													<span class="stepper-number">5</span>
-												</div>
-												<div class="stepper-label">
-													<h3 class="stepper-title">Completed</h3>
-													<div class="stepper-desc fw-bold">Woah, we are here</div>
-												</div>
+											<div class="stepper-label">
+												<h3 class="stepper-title">Completed</h3>
+												<div class="stepper-desc fw-bold">Woah, we are here</div>
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="card d-flex flex-row-fluid flex-center">
-									<form class="card-body py-20 w-100 w-xl-700px px-9" novalidate="novalidate" id="kt_create_account_form">
-										<div class="current animate__animated animate__fadeIn" id="serverFramework" data-kt-stepper-element="content">
-											<div class="w-100">
-												<div class="pb-10 pb-lg-15">
-													<h2 class="fw-bolder d-flex align-items-center text-dark">Choose Account Type
-													<i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip" title="Billing is issued based on your selected account type"></i></h2>
-													<div class="text-muted fw-bold fs-6">If you need more info, please check out
-													<a href="#" class="link-primary fw-bolder">Framework setup</a>.</div>
-												</div>
-												<div class="fv-row">
-													<div class="row">
-														<div class="col-lg-6">
-															<input type="radio" class="btn-check" name="framework" value="esx" id="kt_create_account_form_account_type_esx" />
-															<label class="btn btn-outline btn-outline-dashed btn-outline-default p-7 d-flex align-items-center mb-10" for="kt_create_account_form_account_type_esx">
-																<span class="svg-icon svg-icon-3x me-5">
-																	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-																		<path d="M20 14H18V10H20C20.6 10 21 10.4 21 11V13C21 13.6 20.6 14 20 14ZM21 19V17C21 16.4 20.6 16 20 16H18V20H20C20.6 20 21 19.6 21 19ZM21 7V5C21 4.4 20.6 4 20 4H18V8H20C20.6 8 21 7.6 21 7Z" fill="currentColor" />
-																		<path opacity="0.3" d="M17 22H3C2.4 22 2 21.6 2 21V3C2 2.4 2.4 2 3 2H17C17.6 2 18 2.4 18 3V21C18 21.6 17.6 22 17 22ZM10 7C8.9 7 8 7.9 8 9C8 10.1 8.9 11 10 11C11.1 11 12 10.1 12 9C12 7.9 11.1 7 10 7ZM13.3 16C14 16 14.5 15.3 14.3 14.7C13.7 13.2 12 12 10.1 12C8.10001 12 6.49999 13.1 5.89999 14.7C5.59999 15.3 6.19999 16 7.39999 16H13.3Z" fill="currentColor" />
-																	</svg>
-																</span>
-																<span class="d-block fw-bold text-start">
-																	<span class="text-dark fw-bolder d-block fs-4 mb-2">ESX</span>
-																	<span class="text-muted fw-bold fs-6">{Framework} description</span>
-																</span>
-															</label>
-														</div>
-														
-														<div class="col-lg-6">
-															<input type="radio" class="btn-check" name="framework" value="esx" id="kt_create_account_form_account_type_qbcore" />
-															<label class="btn btn-outline btn-outline-dashed btn-outline-default p-7 d-flex align-items-center mb-10" for="kt_create_account_form_account_type_qbcore">
-																<span class="svg-icon svg-icon-3x me-5">
-																	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-																		<path d="M20 14H18V10H20C20.6 10 21 10.4 21 11V13C21 13.6 20.6 14 20 14ZM21 19V17C21 16.4 20.6 16 20 16H18V20H20C20.6 20 21 19.6 21 19ZM21 7V5C21 4.4 20.6 4 20 4H18V8H20C20.6 8 21 7.6 21 7Z" fill="currentColor" />
-																		<path opacity="0.3" d="M17 22H3C2.4 22 2 21.6 2 21V3C2 2.4 2.4 2 3 2H17C17.6 2 18 2.4 18 3V21C18 21.6 17.6 22 17 22ZM10 7C8.9 7 8 7.9 8 9C8 10.1 8.9 11 10 11C11.1 11 12 10.1 12 9C12 7.9 11.1 7 10 7ZM13.3 16C14 16 14.5 15.3 14.3 14.7C13.7 13.2 12 12 10.1 12C8.10001 12 6.49999 13.1 5.89999 14.7C5.59999 15.3 6.19999 16 7.39999 16H13.3Z" fill="currentColor" />
-																	</svg>
-																</span>
-																<span class="d-block fw-bold text-start">
-																	<span class="text-dark fw-bolder d-block fs-4 mb-2">QBCore</span>
-																	<span class="text-muted fw-bold fs-6">{Framework} description</span>
-																</span>
-															</label>
-														</div>
-
-														<div class="col-lg-6">
-															<input type="radio" class="btn-check" name="framework" value="esx" id="kt_create_account_form_account_type_VRP" />
-															<label class="btn btn-outline btn-outline-dashed btn-outline-default p-7 d-flex align-items-center mb-10" for="kt_create_account_form_account_type_VRP">
-																<span class="svg-icon svg-icon-3x me-5">
-																	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-																		<path d="M20 14H18V10H20C20.6 10 21 10.4 21 11V13C21 13.6 20.6 14 20 14ZM21 19V17C21 16.4 20.6 16 20 16H18V20H20C20.6 20 21 19.6 21 19ZM21 7V5C21 4.4 20.6 4 20 4H18V8H20C20.6 8 21 7.6 21 7Z" fill="currentColor" />
-																		<path opacity="0.3" d="M17 22H3C2.4 22 2 21.6 2 21V3C2 2.4 2.4 2 3 2H17C17.6 2 18 2.4 18 3V21C18 21.6 17.6 22 17 22ZM10 7C8.9 7 8 7.9 8 9C8 10.1 8.9 11 10 11C11.1 11 12 10.1 12 9C12 7.9 11.1 7 10 7ZM13.3 16C14 16 14.5 15.3 14.3 14.7C13.7 13.2 12 12 10.1 12C8.10001 12 6.49999 13.1 5.89999 14.7C5.59999 15.3 6.19999 16 7.39999 16H13.3Z" fill="currentColor" />
-																	</svg>
-																</span>
-																<span class="d-block fw-bold text-start">
-																	<span class="text-dark fw-bolder d-block fs-4 mb-2">VRP</span>
-																	<span class="text-muted fw-bold fs-6">{Framework} description</span>
-																</span>
-															</label>
-														</div>
-
-														<div class="col-lg-6">
-															<input type="radio" class="btn-check" name="framework" value="esx" id="kt_create_account_form_account_type_VRPEX" />
-															<label class="btn btn-outline btn-outline-dashed btn-outline-default p-7 d-flex align-items-center mb-10" for="kt_create_account_form_account_type_VRPEX">
-																<span class="svg-icon svg-icon-3x me-5">
-																	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-																		<path d="M20 14H18V10H20C20.6 10 21 10.4 21 11V13C21 13.6 20.6 14 20 14ZM21 19V17C21 16.4 20.6 16 20 16H18V20H20C20.6 20 21 19.6 21 19ZM21 7V5C21 4.4 20.6 4 20 4H18V8H20C20.6 8 21 7.6 21 7Z" fill="currentColor" />
-																		<path opacity="0.3" d="M17 22H3C2.4 22 2 21.6 2 21V3C2 2.4 2.4 2 3 2H17C17.6 2 18 2.4 18 3V21C18 21.6 17.6 22 17 22ZM10 7C8.9 7 8 7.9 8 9C8 10.1 8.9 11 10 11C11.1 11 12 10.1 12 9C12 7.9 11.1 7 10 7ZM13.3 16C14 16 14.5 15.3 14.3 14.7C13.7 13.2 12 12 10.1 12C8.10001 12 6.49999 13.1 5.89999 14.7C5.59999 15.3 6.19999 16 7.39999 16H13.3Z" fill="currentColor" />
-																	</svg>
-																</span>
-																<span class="d-block fw-bold text-start">
-																	<span class="text-dark fw-bolder d-block fs-4 mb-2">VRPEX</span>
-																	<span class="text-muted fw-bold fs-6">{Framework} description</span>
-																</span>
-															</label>
-														</div>
-													</div>
+							</div>
+							<div id="panelRight" class="card d-flex flex-row-fluid flex-center">
+								<form class="card-body py-20 w-100 w-xl-700px px-9" novalidate="novalidate"
+									id="kt_create_account_form">
+									<div class="current animate__animated animate__fadeIn" id="serverFramework"
+										data-kt-stepper-element="content">
+										<div class="w-100">
+											<div class="pb-10 pb-lg-15">
+												<h2 class="fw-bolder d-flex align-items-center text-dark">Choose Account
+													Type
+													<i class="fas fa-exclamation-circle ms-2 fs-7"
+														data-bs-toggle="tooltip"
+														title="Billing is issued based on your selected account type"></i>
+												</h2>
+												<div class="text-muted fw-bold fs-6">If you need more info, please check
+													out
+													<a href="#" class="link-primary fw-bolder">Framework setup</a>.
 												</div>
 											</div>
-										</div>
-										<div class="animate__animated" data-kt-stepper-element="content" id="databaseSettings">
-											<div class="w-100">
-												<div class="mb-10 fv-row">
-													<label class="form-label mb-3">Database Server</label>
-													<input type="text" class="form-control form-control-lg form-control-solid" name="db_server" placeholder="127.0.0.1" value="" />
-												</div>
-
-												<div class="mb-10 fv-row">
-													<label class="form-label mb-3">Database Port</label>
-													<input type="text" class="form-control form-control-lg form-control-solid" name="db_port" placeholder="3306" value="" />
-												</div>
-
-												<div class="mb-10 fv-row">
-													<label class="form-label mb-3">Database Username</label>
-													<input type="text" class="form-control form-control-lg form-control-solid" name="db_username" placeholder="root" value="" />
-												</div>
-
-												<div class="mb-10 fv-row">
-													<label class="form-label mb-3">Database Password</label>
-													<input type="text" class="form-control form-control-lg form-control-solid" name="db_password" placeholder="1234" value="" />
-												</div>
-
-												<div class="mb-10 fv-row">
-													<label class="form-label mb-3">Database Name</label>
-													<input type="text" class="form-control form-control-lg form-control-solid" name="db_name" placeholder="MyRoleplayServer" value="" />
-												</div>
-											</div>
-										</div>
-										<div class="animate__animated" data-kt-stepper-element="content" id="rconCredentials">
-											<div class="w-100">
-												<div class="pb-10 pb-lg-12">
-													<h2 class="fw-bolder text-dark">RCON & Other Setup</h2>
-													<div class="text-muted fw-bold fs-6">If you need more info, please check out
-													<a href="#" class="link-primary fw-bolder">Help Page</a>.</div>
-												</div>
-												<div class="fv-row mb-10">
-													<label class="form-label required">Server Name</label>
-													<input name="sv_name" class="form-control form-control-lg form-control-solid" placeholder="MyServer RP" value="" />
-												</div>
-												<div class="fv-row mb-10">
-													<label class="form-label required">Server Port</label>
-													<div class="input-group mb-5">
-														<input type="text" class="form-control form-control-lg form-control-solid" name="sv_ip" placeholder="12.34.56.78" >
-														<span class="input-group-text">:</span>
-														<input type="text" class="form-control form-control-lg form-control-solid" name="sv_port" placeholder="30120" >
-													</div>
-												</div>
-												<div class="fv-row mb-10">
-													<label class="form-label required">Server RCON Password</label>
-													<input name="sv_password" class="form-control form-control-lg form-control-solid" placeholder="12345678" value="" />
-												</div>
-											</div>
-										</div>
-										<div class="animate__animated" data-kt-stepper-element="content" id="ftpCredentials">
-											<div class="w-100">
-												<div class="pb-10 pb-lg-15">
-													<h2 class="fw-bolder text-dark">FTP Credentials</h2>
-													<div class="text-muted fw-bold fs-6">If you need more info, please check out
-													<a href="#" class="text-primary fw-bolder">Help Page</a>.</div>
-												</div>
-												
-												<div class="row mb-10">
-													<div class="col-md-4 fv-row">
-														<label class="d-flex align-items-center fs-6 fw-bold form-label mb-2">
-															<span class="required">FTP Server</span>
-															
+											<div class="fv-row">
+												<div class="row">
+													<div class="col-lg-6">
+														<input type="radio" class="btn-check" name="framework"
+															value="esx" id="kt_create_account_form_account_type_esx" />
+														<label
+															class="btn btn-outline btn-outline-dashed btn-outline-default p-7 d-flex align-items-center mb-10"
+															for="kt_create_account_form_account_type_esx">
+															<span class="svg-icon svg-icon-3x me-5">
+																<svg xmlns="http://www.w3.org/2000/svg" width="24"
+																	height="24" viewBox="0 0 24 24" fill="none">
+																	<path
+																		d="M20 14H18V10H20C20.6 10 21 10.4 21 11V13C21 13.6 20.6 14 20 14ZM21 19V17C21 16.4 20.6 16 20 16H18V20H20C20.6 20 21 19.6 21 19ZM21 7V5C21 4.4 20.6 4 20 4H18V8H20C20.6 8 21 7.6 21 7Z"
+																		fill="currentColor" />
+																	<path opacity="0.3"
+																		d="M17 22H3C2.4 22 2 21.6 2 21V3C2 2.4 2.4 2 3 2H17C17.6 2 18 2.4 18 3V21C18 21.6 17.6 22 17 22ZM10 7C8.9 7 8 7.9 8 9C8 10.1 8.9 11 10 11C11.1 11 12 10.1 12 9C12 7.9 11.1 7 10 7ZM13.3 16C14 16 14.5 15.3 14.3 14.7C13.7 13.2 12 12 10.1 12C8.10001 12 6.49999 13.1 5.89999 14.7C5.59999 15.3 6.19999 16 7.39999 16H13.3Z"
+																		fill="currentColor" />
+																</svg>
+															</span>
+															<span class="d-block fw-bold text-start">
+																<span
+																	class="text-dark fw-bolder d-block fs-4 mb-2">ESX</span>
+																<span class="text-muted fw-bold fs-6">{Framework}
+																	description</span>
+															</span>
 														</label>
-														<div class="position-relative">
-															<input type="text" class="form-control form-control-solid" minlength="3" maxlength="4" placeholder="12.34.56.78" name="ftp_server" />
-														</div>
 													</div>
-													<div class="col-md-4 fv-row">
-														<label class="d-flex align-items-center fs-6 fw-bold form-label mb-2">
-															<span class="required">FTP Port</span>
-															
+
+													<div class="col-lg-6">
+														<input type="radio" class="btn-check" name="framework"
+															value="qbcore"
+															id="kt_create_account_form_account_type_qbcore" />
+														<label
+															class="btn btn-outline btn-outline-dashed btn-outline-default p-7 d-flex align-items-center mb-10"
+															for="kt_create_account_form_account_type_qbcore">
+															<span class="svg-icon svg-icon-3x me-5">
+																<svg xmlns="http://www.w3.org/2000/svg" width="24"
+																	height="24" viewBox="0 0 24 24" fill="none">
+																	<path
+																		d="M20 14H18V10H20C20.6 10 21 10.4 21 11V13C21 13.6 20.6 14 20 14ZM21 19V17C21 16.4 20.6 16 20 16H18V20H20C20.6 20 21 19.6 21 19ZM21 7V5C21 4.4 20.6 4 20 4H18V8H20C20.6 8 21 7.6 21 7Z"
+																		fill="currentColor" />
+																	<path opacity="0.3"
+																		d="M17 22H3C2.4 22 2 21.6 2 21V3C2 2.4 2.4 2 3 2H17C17.6 2 18 2.4 18 3V21C18 21.6 17.6 22 17 22ZM10 7C8.9 7 8 7.9 8 9C8 10.1 8.9 11 10 11C11.1 11 12 10.1 12 9C12 7.9 11.1 7 10 7ZM13.3 16C14 16 14.5 15.3 14.3 14.7C13.7 13.2 12 12 10.1 12C8.10001 12 6.49999 13.1 5.89999 14.7C5.59999 15.3 6.19999 16 7.39999 16H13.3Z"
+																		fill="currentColor" />
+																</svg>
+															</span>
+															<span class="d-block fw-bold text-start">
+																<span
+																	class="text-dark fw-bolder d-block fs-4 mb-2">QBCore</span>
+																<span class="text-muted fw-bold fs-6">{Framework}
+																	description</span>
+															</span>
 														</label>
-														<div class="position-relative">
-															<input type="text" class="form-control form-control-solid" minlength="3" maxlength="4" placeholder="21" name="ftp_port" />
-														</div>
 													</div>
-													<div class="col-md-4 fv-row">
-														<label class="d-flex align-items-center fs-6 fw-bold form-label mb-2">
-															<span class="required">FTP Password</span>
-															
+
+													<div class="col-lg-6">
+														<input type="radio" class="btn-check" name="framework"
+															value="vrp" id="kt_create_account_form_account_type_VRP" />
+														<label
+															class="btn btn-outline btn-outline-dashed btn-outline-default p-7 d-flex align-items-center mb-10"
+															for="kt_create_account_form_account_type_VRP">
+															<span class="svg-icon svg-icon-3x me-5">
+																<svg xmlns="http://www.w3.org/2000/svg" width="24"
+																	height="24" viewBox="0 0 24 24" fill="none">
+																	<path
+																		d="M20 14H18V10H20C20.6 10 21 10.4 21 11V13C21 13.6 20.6 14 20 14ZM21 19V17C21 16.4 20.6 16 20 16H18V20H20C20.6 20 21 19.6 21 19ZM21 7V5C21 4.4 20.6 4 20 4H18V8H20C20.6 8 21 7.6 21 7Z"
+																		fill="currentColor" />
+																	<path opacity="0.3"
+																		d="M17 22H3C2.4 22 2 21.6 2 21V3C2 2.4 2.4 2 3 2H17C17.6 2 18 2.4 18 3V21C18 21.6 17.6 22 17 22ZM10 7C8.9 7 8 7.9 8 9C8 10.1 8.9 11 10 11C11.1 11 12 10.1 12 9C12 7.9 11.1 7 10 7ZM13.3 16C14 16 14.5 15.3 14.3 14.7C13.7 13.2 12 12 10.1 12C8.10001 12 6.49999 13.1 5.89999 14.7C5.59999 15.3 6.19999 16 7.39999 16H13.3Z"
+																		fill="currentColor" />
+																</svg>
+															</span>
+															<span class="d-block fw-bold text-start">
+																<span
+																	class="text-dark fw-bolder d-block fs-4 mb-2">VRP</span>
+																<span class="text-muted fw-bold fs-6">{Framework}
+																	description</span>
+															</span>
 														</label>
-														<div class="position-relative">
-															<input type="text" class="form-control form-control-solid" minlength="3" maxlength="4" placeholder="******" name="ftp_password" />
-														</div>
 													</div>
-													
+
+													<div class="col-lg-6">
+														<input type="radio" class="btn-check" name="framework"
+															value="vrpex"
+															id="kt_create_account_form_account_type_VRPEX" />
+														<label
+															class="btn btn-outline btn-outline-dashed btn-outline-default p-7 d-flex align-items-center mb-10"
+															for="kt_create_account_form_account_type_VRPEX">
+															<span class="svg-icon svg-icon-3x me-5">
+																<svg xmlns="http://www.w3.org/2000/svg" width="24"
+																	height="24" viewBox="0 0 24 24" fill="none">
+																	<path
+																		d="M20 14H18V10H20C20.6 10 21 10.4 21 11V13C21 13.6 20.6 14 20 14ZM21 19V17C21 16.4 20.6 16 20 16H18V20H20C20.6 20 21 19.6 21 19ZM21 7V5C21 4.4 20.6 4 20 4H18V8H20C20.6 8 21 7.6 21 7Z"
+																		fill="currentColor" />
+																	<path opacity="0.3"
+																		d="M17 22H3C2.4 22 2 21.6 2 21V3C2 2.4 2.4 2 3 2H17C17.6 2 18 2.4 18 3V21C18 21.6 17.6 22 17 22ZM10 7C8.9 7 8 7.9 8 9C8 10.1 8.9 11 10 11C11.1 11 12 10.1 12 9C12 7.9 11.1 7 10 7ZM13.3 16C14 16 14.5 15.3 14.3 14.7C13.7 13.2 12 12 10.1 12C8.10001 12 6.49999 13.1 5.89999 14.7C5.59999 15.3 6.19999 16 7.39999 16H13.3Z"
+																		fill="currentColor" />
+																</svg>
+															</span>
+															<span class="d-block fw-bold text-start">
+																<span
+																	class="text-dark fw-bolder d-block fs-4 mb-2">VRPEX</span>
+																<span class="text-muted fw-bold fs-6">{Framework}
+																	description</span>
+															</span>
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="animate__animated" data-kt-stepper-element="content"
+										id="databaseSettings">
+										<div class="w-100">
+											<div class="mb-10 fv-row">
+												<label class="form-label mb-3">Database Server</label>
+												<input type="text"
+													class="form-control form-control-lg form-control-solid"
+													name="db_server" placeholder="127.0.0.1" value="" />
+											</div>
+
+											<div class="mb-10 fv-row">
+												<label class="form-label mb-3">Database Port</label>
+												<input type="text"
+													class="form-control form-control-lg form-control-solid"
+													name="db_port" placeholder="3306" value="" />
+											</div>
+
+											<div class="mb-10 fv-row">
+												<label class="form-label mb-3">Database Username</label>
+												<input type="text"
+													class="form-control form-control-lg form-control-solid"
+													name="db_username" placeholder="root" value="" />
+											</div>
+
+											<div class="mb-10 fv-row">
+												<label class="form-label mb-3">Database Password</label>
+												<input type="text"
+													class="form-control form-control-lg form-control-solid"
+													name="db_password" placeholder="1234" value="" />
+											</div>
+
+											<div class="mb-10 fv-row">
+												<label class="form-label mb-3">Database Name</label>
+												<input type="text"
+													class="form-control form-control-lg form-control-solid"
+													name="db_name" placeholder="MyRoleplayServer" value="" />
+											</div>
+										</div>
+									</div>
+									<div class="animate__animated" data-kt-stepper-element="content"
+										id="rconCredentials">
+										<div class="w-100">
+											<div class="pb-10 pb-lg-12">
+												<h2 class="fw-bolder text-dark">RCON & Other Setup</h2>
+												<div class="text-muted fw-bold fs-6">If you need more info, please check
+													out
+													<a href="#" class="link-primary fw-bolder">Help Page</a>.
+												</div>
+											</div>
+											<div class="fv-row mb-10">
+												<label class="form-label required">Server Name</label>
+												<input name="sv_name"
+													class="form-control form-control-lg form-control-solid"
+													placeholder="MyServer RP" value="" />
+											</div>
+											<div class="fv-row mb-10">
+												<label class="form-label required">Server Port</label>
+												<div class="input-group mb-5">
+													<input type="text"
+														class="form-control form-control-lg form-control-solid"
+														name="sv_ip" placeholder="12.34.56.78">
+													<span class="input-group-text">:</span>
+													<input type="text"
+														class="form-control form-control-lg form-control-solid"
+														name="sv_port" placeholder="30120">
+												</div>
+											</div>
+											<div class="fv-row mb-10">
+												<label class="form-label required">Server RCON Password</label>
+												<input name="sv_password"
+													class="form-control form-control-lg form-control-solid"
+													placeholder="12345678" value="" />
+											</div>
+										</div>
+									</div>
+									<div class="animate__animated" data-kt-stepper-element="content"
+										id="ftpCredentials">
+										<div class="w-100">
+											<div class="pb-10 pb-lg-15">
+												<h2 class="fw-bolder text-dark">FTP Credentials</h2>
+												<div class="text-muted fw-bold fs-6">If you need more info, please check
+													out
+													<a href="#" class="text-primary fw-bolder">Help Page</a>.
+												</div>
+											</div>
+
+											<div class="row mb-10">
+												<div class="col-md-4 fv-row">
+													<label
+														class="d-flex align-items-center fs-6 fw-bold form-label mb-2">
+														<span class="required">FTP Server</span>
+
+													</label>
+													<div class="position-relative">
+														<input type="text" class="form-control form-control-solid"
+															placeholder="12.34.56.78" name="ftp_server" />
+													</div>
+												</div>
+												<div class="col-md-4 fv-row">
+													<label
+														class="d-flex align-items-center fs-6 fw-bold form-label mb-2">
+														<span class="required">FTP Port</span>
+
+													</label>
+													<div class="position-relative">
+														<input type="text" class="form-control form-control-solid"
+															placeholder="21" name="ftp_port" />
+													</div>
+												</div>
+												<div class="col-md-4 fv-row">
+													<label
+														class="d-flex align-items-center fs-6 fw-bold form-label mb-2">
+														<span class="required">FTP Password</span>
+
+													</label>
+													<div class="position-relative">
+														<input type="text" class="form-control form-control-solid"
+															placeholder="******" name="ftp_password" />
+													</div>
 												</div>
 
-												<div class="fv-row mb-10">
-													<label class="form-label required">FTP Username</label>
-													<input name="ftp_username" class="form-control form-control-lg form-control-solid" placeholder="MyFTPUsername" value="" />
-												</div>
+											</div>
+
+											<div class="fv-row mb-10">
+												<label class="form-label required">FTP Username</label>
+												<input name="ftp_username"
+													class="form-control form-control-lg form-control-solid"
+													placeholder="MyFTPUsername" value="" />
 											</div>
 										</div>
-										<div class="animate__animated" data-kt-stepper-element="content" id="completedWizard">
-											<div class="w-100">
-												<div class="pb-8 pb-lg-10">
-													<h2 class="fw-bolder text-dark">Your Are Done!</h2>
-													<div class="text-muted fw-bold fs-6">If you need more info, please
-													<a href="/authentication/sign-in/basic.html" class="link-primary fw-bolder">Sign In</a>.</div>
+									</div>
+									<div class="animate__animated" data-kt-stepper-element="content"
+										id="completedWizard">
+										<div class="w-100">
+											<div class="pb-8 pb-lg-10">
+												<h2 class="fw-bolder text-dark">Your Are Done!</h2>
+												<div class="text-muted fw-bold fs-6">If you need more info, please
+													<a href="/authentication/sign-in/basic.html"
+														class="link-primary fw-bolder">Sign In</a>.
 												</div>
-												<div class="mb-0">
-													<div class="fs-6 text-gray-600 mb-5">Writing headlines for blog posts is as much an art as it is a science and probably warrants its own post, but for all advise is with what works for your great &amp; amazing audience.</div>
-													<div class="notice d-flex bg-light-warning rounded border-warning border border-dashed p-6">
-														<span class="svg-icon svg-icon-2tx svg-icon-warning me-4">
-															<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-																<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="currentColor" />
-																<rect x="11" y="14" width="7" height="2" rx="1" transform="rotate(-90 11 14)" fill="currentColor" />
-																<rect x="11" y="17" width="2" height="2" rx="1" transform="rotate(-90 11 17)" fill="currentColor" />
-															</svg>
-														</span>
-														<div class="d-flex flex-stack flex-grow-1">
-															<div class="fw-bold">
-																<h4 class="text-gray-900 fw-bolder">We need your attention!</h4>
-																<div class="fs-6 text-gray-700">To start using great tools, please, please
-																<a href="#" class="fw-bolder">Create Team Platform</a></div>
-															</div>
-														</div>
-													</div>
+											</div>
+											<div class="mb-0">
+												<div class="fs-6 text-gray-600 mb-5">Below we have prepared a summary of the configuration, if it is correct you can press the Finish button, if it is not correct you can go back and change the incorrect data.</div>
+
+												<div class="separator my-10"></div>
+
+												<div class="table-responsive">
+													<table class="table table-striped gy-7 gs-7">
+														<thead>
+															<tr
+																class="fw-bold fs-6 text-gray-800 border-bottom border-gray-200">
+																<th>Framework</th>
+																<th>DataBase</th>
+																<th>RCON</th>
+																<th>FTP</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td id="s_framework">Loading...</td>
+
+																<td id="s_db">Loading...</td>
+
+																<td id="s_rcon">Loading...</td>
+
+																<td id="s_ftp">Loading...</td>
+															</tr>
+
+														</tbody>
+													</table>
 												</div>
+
 											</div>
 										</div>
-										<div class="d-flex flex-stack pt-10">
-											<div class="mr-2">
-												<button type="button" id="BackWizard" class="btn btn-lg btn-light-primary me-3">
-													<span class="svg-icon svg-icon-4 me-1">
-														<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-															<rect opacity="0.5" x="6" y="11" width="13" height="2" rx="1" fill="currentColor"></rect>
-															<path d="M8.56569 11.4343L12.75 7.25C13.1642 6.83579 13.1642 6.16421 12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75L5.70711 11.2929C5.31658 11.6834 5.31658 12.3166 5.70711 12.7071L11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25C13.1642 17.8358 13.1642 17.1642 12.75 16.75L8.56569 12.5657C8.25327 12.2533 8.25327 11.7467 8.56569 11.4343Z" fill="currentColor"></path>
-														</svg>
-													</span>
-													Back</button>
-											</div>
-											<div>
-												
-												<button type="button" class="btn btn-lg btn-primary" id="ContinueWizard" data-kt-stepper-action="next">Continue
-												<span class="svg-icon svg-icon-4 ms-1 me-0">
-													<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-														<rect opacity="0.5" x="18" y="13" width="13" height="2" rx="1" transform="rotate(-180 18 13)" fill="currentColor" />
-														<path d="M15.4343 12.5657L11.25 16.75C10.8358 17.1642 10.8358 17.8358 11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25L18.2929 12.7071C18.6834 12.3166 18.6834 11.6834 18.2929 11.2929L12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75C10.8358 6.16421 10.8358 6.83579 11.25 7.25L15.4343 11.4343C15.7467 11.7467 15.7467 12.2533 15.4343 12.5657Z" fill="currentColor" />
+									</div>
+									<div class="d-flex flex-stack pt-10">
+										<div class="mr-2">
+											<button type="button" id="BackWizard"
+												class="btn btn-lg btn-light-primary me-3">
+												<span class="svg-icon svg-icon-4 me-1">
+													<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+														viewBox="0 0 24 24" fill="none">
+														<rect opacity="0.5" x="6" y="11" width="13" height="2" rx="1"
+															fill="currentColor"></rect>
+														<path
+															d="M8.56569 11.4343L12.75 7.25C13.1642 6.83579 13.1642 6.16421 12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75L5.70711 11.2929C5.31658 11.6834 5.31658 12.3166 5.70711 12.7071L11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25C13.1642 17.8358 13.1642 17.1642 12.75 16.75L8.56569 12.5657C8.25327 12.2533 8.25327 11.7467 8.56569 11.4343Z"
+															fill="currentColor"></path>
 													</svg>
 												</span>
+												Back</button>
+										</div>
+										<div>
+
+											<button type="button" class="btn btn-lg btn-primary" id="ContinueWizard"
+												data-kt-stepper-action="next">
+												<span class="indicator-label" id="buttonText">Continue</span>
+												<span class="indicator-progress">Please wait...
+													<span
+														class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+												<span class="svg-icon svg-icon-4 ms-1 me-0" id="arrowContinue">
+													<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+														viewBox="0 0 24 24" fill="none">
+														<rect opacity="0.5" x="18" y="13" width="13" height="2" rx="1"
+															transform="rotate(-180 18 13)" fill="currentColor" />
+														<path
+															d="M15.4343 12.5657L11.25 16.75C10.8358 17.1642 10.8358 17.8358 11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25L18.2929 12.7071C18.6834 12.3166 18.6834 11.6834 18.2929 11.2929L12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75C10.8358 6.16421 10.8358 6.83579 11.25 7.25L15.4343 11.4343C15.7467 11.7467 15.7467 12.2533 15.4343 12.5657Z"
+															fill="currentColor" />
+													</svg>
+												</span>
+											</button>
+										</div>
+									</div>
+								</form>
+							</div>
+
+							<div id="NewAccountPanel" style="display: none;">
+								<div class="fade show" tabindex="-1" id="kt_modal_1" aria-modal="true" role="dialog" style="display: block;">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h5 class="modal-title">¡Congratulations!</h5>
+												<div class="btn btn-icon btn-sm btn-active-light-primary ms-2" data-bs-dismiss="modal" aria-label="Close">
+													<span class="svg-icon svg-icon-2x">
+														<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+															<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor"></rect>
+															<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor"></rect>
+														</svg>
+													</span>
+												</div>
+											</div>
+											<div class="modal-body">
+												<p>The administration panel is ready, below we provide you with a username and password to access the panel for the first time, this password can be changed whenever you want in the account configuration section.</p>
+												<div class="separator my-10"></div>
+												<h4><strong>Username:</strong></h4><div id="newUser">admin@admin.es</div>
+												<br>
+												<h4><strong>Password:</strong> </h4><div id="newPassword">1234</div>
+												<br>
+												<p>These data are very <strong>important</strong> and you should not forget them because they could be claimed later.</p>
+											</div>
+											<div class="modal-footer">
+												<button type="button" id="StartPanel" class="btn btn-primary">Start Panel</button>
 											</div>
 										</div>
-									</form>
+									</div>
 								</div>
+									
 							</div>
+
+							
 						</div>
 					</div>
-					
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" tabindex="-1" id="kt_modal_1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Modal title</h5>
+
+					<!--begin::Close-->
+					<div class="btn btn-icon btn-sm btn-active-light-primary ms-2" data-bs-dismiss="modal"
+						aria-label="Close">
+						<span class="svg-icon svg-icon-2x"></span>
+					</div>
+					<!--end::Close-->
+				</div>
+
+				<div class="modal-body">
+					<p>Modal body text goes here.</p>
+				</div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary">Save changes</button>
 				</div>
 			</div>
 		</div>
-		
-		<script>var hostUrl = "assets/";</script>
-		<script src="/setup/js/SetupWizard.js"></script>
-	</body>
+	</div>
+
+
+	<script src="/setup/js/SetupWizard.js"></script>
+</body>
+
 </html>

@@ -9,6 +9,8 @@
   "author": "DaniGP17",
   "license": "ISC",
   "dependencies": {
-    "ws": "^8.10.0"
+    "websocket": "^1.0.34",
+    "ws": "^8.10.0",
+    "xhr2": "^0.2.1"
   }
 }

@@ -1,12 +1,10 @@
-const ftp = require("basic-ftp") 
-
-// const conn = new Rcon('83.63.49.210', 30120, "12345678", options);
+const ftp = require("basic-ftp");
+const config = require('../../Config.json');
 
 const CheckFtpConnection = function(credentials){
     return new Promise(function(resolve, reject){
         const client = new ftp.Client()
         client.ftp.verbose = false
-        var connected = false;
         
         client.access({
             host: credentials.host,
@@ -25,4 +23,43 @@ const CheckFtpConnection = function(credentials){
     })
 }
 
-module.exports = { CheckFtpConnection };
+
+async function GetFileList(path) {
+    const client = new ftp.Client()
+    client.ftp.verbose = false
+    try {
+        await client.access({
+            host: config[6].ftp_server,
+            user: config[6].ftp_username,
+            password: config[6].ftp_password,
+            secure: false
+        })
+        await client.ensureDir(path)
+        return await client.list()
+    }
+    catch(err) {
+        console.log(err)
+    }
+    client.close()
+}
+
+async function UploadFile(folderPath) {
+    const client = new ftp.Client()
+    client.ftp.verbose = false
+    try {
+        await client.access({
+            host: config[6].ftp_server,
+            user: config[6].ftp_username,
+            password: config[6].ftp_password,
+            secure: false
+        })
+        await client.ensureDir(folderPath)
+        await client.uploadFromDir('./server/panel_script')
+    }
+    catch(err) {
+        console.log(err)
+    }
+    client.close()
+}
+
+module.exports = { CheckFtpConnection, GetFileList, UploadFile };

@@ -7,6 +7,8 @@ const config = require('../Config.json');
 const rcon = require('./rcon/functions.js');
 const colors = require('colors');
 const cors = require('cors');
+const installation = require('./installation.js');
+const websocket = require('./sockets/index.js')
 
 //settings
 app.set('json spaces', 2);
@@ -23,7 +25,9 @@ app.use(cors({
 
 //routes
 app.use('/api/', require('./routes/routes.js'));
+app.use('/api/', require('./routes/register.js'));
 app.use('/api/setup/', require('./routes/setup.js'));
+app.use('/api/installation/', require('./server-script.js'));
 
 //start the api server
 app.listen(config[0].ApiPort, () => {

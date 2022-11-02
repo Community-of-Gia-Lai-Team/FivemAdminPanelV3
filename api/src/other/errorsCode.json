@@ -10,5 +10,7 @@
     "CantConnectToRcon": 8,
     "RconInvalidPassword": 9,
     "InvalidRconCredentials": 10,
-    "CantConnectToFtp": 11
+    "CantConnectToFtp": 11,
+    "RegisterMissingData": 12,
+    "InvalidPathInInstallation": 13
 }]

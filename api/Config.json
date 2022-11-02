@@ -14,7 +14,7 @@
 		"cookieName": "panel_ssid"
 	},
 	{
-		"framework": "esx"
+		"framework": "qbcore"
 	},
 	{
 		"ApiPort": "3000",

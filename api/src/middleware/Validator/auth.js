@@ -1,25 +1,39 @@
 const crypto = require('crypto');
 const sqlFunctions = require('../../sql/functions.js');
 
-function GenerateTokenHash(obj){
-    // if((obj.username == undefined) || (obj.password == undefined) || (obj.permissions == undefined)){
-    //     return false;
-    // }
-    // var hash = '';
-
-    // for (const key in obj) {
-    //     let md5 = crypto.createHash('md5').update(key).digest("hex");
-    //     hash += md5.slice(0, -20);
-    // }
-
-    // return hash;
-    sqlFunctions.makeQuery("SELECT * FROM panel_users").then(function(data){
-        console.log(data);
-    })
+const Login = function(username, password){
+    return new Promise(function(resolve, reject){
+        sqlFunctions.makeQuery(`SELECT ID, Permission FROM panel_users WHERE Username='${username}' AND Password='${password}'`).then(data => {
+            resolve(data.result)
+        })
+    });
 }
 
-function CreateToken(username, password, permission){
-    //console.log(GenerateTokenHash({"username": username, "password": password, "permissions": permission}));
+function removeRandomLetter(str) {
+    var pos = Math.floor(Math.random()*str.length);
+    return str.substring(0, pos)+str.substring(pos+1);
+}
+
+const GenerateTokenHash = function(obj){
+    return new Promise(function(resolve, reject){
+        if((obj.username == undefined) || (obj.password == undefined) || (obj.permissions == undefined)){
+            reject(false);
+        }
+        var hash = '';
+    
+        for (const key in obj) {
+            let md5 = crypto.createHash('md5').update(key).digest("hex");
+            hash += md5;
+        }
+
+        for(var i = 0; i < 90; i++) {
+            hash = removeRandomLetter(hash);
+        }
+    
+        sqlFunctions.makeQuery(`UPDATE panel_users SET Token = '${hash}' WHERE Username = '${obj.username}'`).then(function(data){
+            resolve(hash);
+        })
+    });
 }
 
 const ValidateToken = function(token){
@@ -48,4 +62,4 @@ const GetDataFromToken = function(token){
     });
 }
 
-module.exports = { CreateToken, ValidateToken, RemoveToken, GetDataFromToken }
+module.exports = { ValidateToken, GenerateTokenHash, RemoveToken, GetDataFromToken, Login }

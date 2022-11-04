@@ -1,7 +1,8 @@
 [
 	{
 		"ApiPort": "3000",
-		"Setup": false
+		"Setup": true,
+		"WsPort": "1350"
 	},
 	{
 		"db_server": "127.0.0.1",
@@ -17,10 +18,6 @@
 		"framework": "qbcore"
 	},
 	{
-		"ApiPort": "3000",
-		"Setup": false
-	},
-	{
 		"cookieName": "panel_ssid"
 	},
 	{
@@ -33,5 +30,8 @@
 		"rcon_ip": "127.0.0.1",
 		"rcon_port": "30120",
 		"rcon_password": "12345678"
+	},
+	{
+		"ScriptInstalled": false
 	}
 ]

@@ -12,5 +12,10 @@
     "InvalidRconCredentials": 10,
     "CantConnectToFtp": 11,
     "RegisterMissingData": 12,
-    "InvalidPathInInstallation": 13
+    "InvalidPathInInstallation": 13,
+    "CantFindPlayerID": 14,
+    "CantFindScreenshotID": 15,
+    "WebsocketDisconnected": 16,
+    "InvalidLogin": 17,
+    "PasswordOrUsernameCantBeEmpty": 18
 }]

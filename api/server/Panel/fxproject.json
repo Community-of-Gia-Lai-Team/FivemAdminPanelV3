@@ -1,0 +1,38 @@
+{
+  "assets": {
+    "panel_script": {
+      "enabled": true,
+      "restartOnChange": true
+    },
+    "screenshot-basic": {
+      "enabled": true,
+      "restartOnChange": true
+    },
+    "testing": {
+      "enabled": false,
+      "restartOnChange": false
+    }
+  },
+  "serverUpdateChannel": "latest",
+  "systemResources": [
+    "basic-gamemode",
+    "map-skater",
+    "chat",
+    "playernames",
+    "mapmanager",
+    "spawnmanager",
+    "sessionmanager",
+    "baseevents",
+    "hardcap",
+    "webpack",
+    "yarn",
+    "player-data",
+    "runcode",
+    "rconlog",
+    "chat-theme-gtao",
+    "map-hipster"
+  ],
+  "name": "Panel",
+  "createdAt": "2022-11-03T21:05:45.446Z",
+  "variables": {}
+}

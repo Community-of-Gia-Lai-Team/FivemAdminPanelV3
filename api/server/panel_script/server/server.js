@@ -2,6 +2,11 @@ const WebSocketClient = require('websocket').client;
 
 var client = new WebSocketClient();
 
+const players = getPlayers();
+for(let i = 0; i < players.length; i++){
+    console.log(GetPlayerName(players[i]))
+}
+
 client.on('connectFailed', function(error) {
     console.log('Connect Error: ' + error.toString());
 });
@@ -22,11 +27,9 @@ client.on('connect', function(connection) {
         switch(data[0]){
             case 'screenshot':
                 console.log(`Get screenshot of ${data[1]} && ${data[2]}`)
-                for(let i = 0; i < 200; i++){
-                    if(GetPlayerName(`${i}`) == data[2]){
-                        connection.sendUTF(`ID: ${i}`);
-                    }
-                }
+                //players[data[1]]
+                
+                break;
                 //connection.message("Screenshot taked");
                 //connection.sendUTF("url de la foto");
         }

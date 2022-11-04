@@ -13,8 +13,7 @@ router.post('/createAdmin', (req, res) => {
     if(username == '' || username == null || password == '' || password == null ){
         res.json({ "status": "bad", "errorCode": Errors[0].RegisterMissingData })
     }
-
-    console.log(res.locals.isAuth)
+    
 })
 
 module.exports = router;

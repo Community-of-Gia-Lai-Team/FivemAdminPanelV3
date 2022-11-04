@@ -1,0 +1,263 @@
+2022/11/04-18:19:07.070133 525c RocksDB version: 6.10.0
+2022/11/04-18:19:07.070208 525c Git sha rocksdb_build_git_sha:@@GIT_SHA@@
+2022/11/04-18:19:07.070227 525c Compile date Aug 26 2022
+2022/11/04-18:19:07.070240 525c DB SUMMARY
+2022/11/04-18:19:07.070461 525c SST files in C:\Users\danid\Documents\GitHub\FivemAdminPanelV3\api\server\Panel\.fxdk\fxserver\db\default dir, Total Num: 0, files: 
+2022/11/04-18:19:07.070478 525c Write Ahead Log file in C:\Users\danid\Documents\GitHub\FivemAdminPanelV3\api\server\Panel\.fxdk\fxserver\db\default: 
+2022/11/04-18:19:07.070490 525c                         Options.error_if_exists: 0
+2022/11/04-18:19:07.070501 525c                       Options.create_if_missing: 1
+2022/11/04-18:19:07.070511 525c                         Options.paranoid_checks: 1
+2022/11/04-18:19:07.070729 525c                                     Options.env: 0000015ED783B1E0
+2022/11/04-18:19:07.070742 525c                                      Options.fs: Legacy File System
+2022/11/04-18:19:07.070747 525c                                Options.info_log: 0000015EC9E8D880
+2022/11/04-18:19:07.070751 525c                Options.max_file_opening_threads: 16
+2022/11/04-18:19:07.070755 525c                              Options.statistics: 0000000000000000
+2022/11/04-18:19:07.070759 525c                               Options.use_fsync: 0
+2022/11/04-18:19:07.070763 525c                       Options.max_log_file_size: 0
+2022/11/04-18:19:07.070767 525c                  Options.max_manifest_file_size: 1073741824
+2022/11/04-18:19:07.070771 525c                   Options.log_file_time_to_roll: 0
+2022/11/04-18:19:07.070775 525c                       Options.keep_log_file_num: 10
+2022/11/04-18:19:07.070779 525c                    Options.recycle_log_file_num: 0
+2022/11/04-18:19:07.070782 525c                         Options.allow_fallocate: 1
+2022/11/04-18:19:07.070786 525c                        Options.allow_mmap_reads: 0
+2022/11/04-18:19:07.070790 525c                       Options.allow_mmap_writes: 0
+2022/11/04-18:19:07.070797 525c                        Options.use_direct_reads: 0
+2022/11/04-18:19:07.070800 525c                        Options.use_direct_io_for_flush_and_compaction: 0
+2022/11/04-18:19:07.070804 525c          Options.create_missing_column_families: 0
+2022/11/04-18:19:07.070808 525c                              Options.db_log_dir: 
+2022/11/04-18:19:07.070812 525c                                 Options.wal_dir: C:\Users\danid\Documents\GitHub\FivemAdminPanelV3\api\server\Panel\.fxdk\fxserver\db\default
+2022/11/04-18:19:07.070816 525c                Options.table_cache_numshardbits: 6
+2022/11/04-18:19:07.070819 525c                      Options.max_subcompactions: 1
+2022/11/04-18:19:07.070823 525c                         Options.WAL_ttl_seconds: 0
+2022/11/04-18:19:07.070827 525c                       Options.WAL_size_limit_MB: 0
+2022/11/04-18:19:07.070830 525c                        Options.max_write_batch_group_size_bytes: 1048576
+2022/11/04-18:19:07.070834 525c             Options.manifest_preallocation_size: 4194304
+2022/11/04-18:19:07.070838 525c                     Options.is_fd_close_on_exec: 1
+2022/11/04-18:19:07.070842 525c                   Options.advise_random_on_open: 1
+2022/11/04-18:19:07.070845 525c                    Options.db_write_buffer_size: 0
+2022/11/04-18:19:07.070849 525c                    Options.write_buffer_manager: 0000015EC9ECD000
+2022/11/04-18:19:07.070853 525c         Options.access_hint_on_compaction_start: 1
+2022/11/04-18:19:07.070857 525c  Options.new_table_reader_for_compaction_inputs: 0
+2022/11/04-18:19:07.070860 525c           Options.random_access_max_buffer_size: 1048576
+2022/11/04-18:19:07.070864 525c                      Options.use_adaptive_mutex: 0
+2022/11/04-18:19:07.070868 525c                            Options.rate_limiter: 0000000000000000
+2022/11/04-18:19:07.070872 525c     Options.sst_file_manager.rate_bytes_per_sec: 0
+2022/11/04-18:19:07.070876 525c                       Options.wal_recovery_mode: 2
+2022/11/04-18:19:07.070880 525c                  Options.enable_thread_tracking: 0
+2022/11/04-18:19:07.070906 525c                  Options.enable_pipelined_write: 0
+2022/11/04-18:19:07.070912 525c                  Options.unordered_write: 0
+2022/11/04-18:19:07.070916 525c         Options.allow_concurrent_memtable_write: 1
+2022/11/04-18:19:07.070920 525c      Options.enable_write_thread_adaptive_yield: 1
+2022/11/04-18:19:07.070924 525c             Options.write_thread_max_yield_usec: 100
+2022/11/04-18:19:07.070927 525c            Options.write_thread_slow_yield_usec: 3
+2022/11/04-18:19:07.070931 525c                               Options.row_cache: None
+2022/11/04-18:19:07.070935 525c                              Options.wal_filter: None
+2022/11/04-18:19:07.070939 525c             Options.avoid_flush_during_recovery: 0
+2022/11/04-18:19:07.070943 525c             Options.allow_ingest_behind: 0
+2022/11/04-18:19:07.070946 525c             Options.preserve_deletes: 0
+2022/11/04-18:19:07.070950 525c             Options.two_write_queues: 0
+2022/11/04-18:19:07.070954 525c             Options.manual_wal_flush: 0
+2022/11/04-18:19:07.070957 525c             Options.atomic_flush: 0
+2022/11/04-18:19:07.070961 525c             Options.avoid_unnecessary_blocking_io: 0
+2022/11/04-18:19:07.070965 525c                 Options.persist_stats_to_disk: 0
+2022/11/04-18:19:07.070968 525c                 Options.write_dbid_to_manifest: 0
+2022/11/04-18:19:07.070972 525c                 Options.log_readahead_size: 0
+2022/11/04-18:19:07.070976 525c                 Options.file_checksum_gen_factory: Unknown
+2022/11/04-18:19:07.070979 525c                 Options.best_efforts_recovery: 0
+2022/11/04-18:19:07.070983 525c             Options.max_background_jobs: 2
+2022/11/04-18:19:07.070987 525c             Options.max_background_compactions: -1
+2022/11/04-18:19:07.070991 525c             Options.avoid_flush_during_shutdown: 0
+2022/11/04-18:19:07.070994 525c           Options.writable_file_max_buffer_size: 1048576
+2022/11/04-18:19:07.070998 525c             Options.delayed_write_rate : 16777216
+2022/11/04-18:19:07.071002 525c             Options.max_total_wal_size: 0
+2022/11/04-18:19:07.071006 525c             Options.delete_obsolete_files_period_micros: 21600000000
+2022/11/04-18:19:07.071009 525c                   Options.stats_dump_period_sec: 600
+2022/11/04-18:19:07.071013 525c                 Options.stats_persist_period_sec: 600
+2022/11/04-18:19:07.071017 525c                 Options.stats_history_buffer_size: 1048576
+2022/11/04-18:19:07.071020 525c                          Options.max_open_files: -1
+2022/11/04-18:19:07.071024 525c                          Options.bytes_per_sync: 0
+2022/11/04-18:19:07.071028 525c                      Options.wal_bytes_per_sync: 0
+2022/11/04-18:19:07.071032 525c                   Options.strict_bytes_per_sync: 0
+2022/11/04-18:19:07.071035 525c       Options.compaction_readahead_size: 0
+2022/11/04-18:19:07.071039 525c                  Options.max_background_flushes: -1
+2022/11/04-18:19:07.071043 525c Compression algorithms supported:
+2022/11/04-18:19:07.071049 525c 	kZSTD supported: 0
+2022/11/04-18:19:07.071053 525c 	kSnappyCompression supported: 0
+2022/11/04-18:19:07.071057 525c 	kBZip2Compression supported: 0
+2022/11/04-18:19:07.071061 525c 	kZlibCompression supported: 1
+2022/11/04-18:19:07.071064 525c 	kLZ4Compression supported: 1
+2022/11/04-18:19:07.071068 525c 	kXpressCompression supported: 0
+2022/11/04-18:19:07.071072 525c 	kLZ4HCCompression supported: 1
+2022/11/04-18:19:07.071075 525c 	kZSTDNotFinalCompression supported: 0
+2022/11/04-18:19:07.071083 525c Fast CRC32 supported: Not supported on x86
+2022/11/04-18:19:07.078482 525c [db\db_impl\db_impl_open.cc:271] Creating manifest 1 
+2022/11/04-18:19:07.090876 525c [db\version_set.cc:4515] Recovering from manifest file: C:\Users\danid\Documents\GitHub\FivemAdminPanelV3\api\server\Panel\.fxdk\fxserver\db\default/MANIFEST-000001
+2022/11/04-18:19:07.091037 525c [db\column_family.cc:579] --------------- Options for column family [default]:
+2022/11/04-18:19:07.091047 525c               Options.comparator: leveldb.BytewiseComparator
+2022/11/04-18:19:07.091086 525c           Options.merge_operator: None
+2022/11/04-18:19:07.091092 525c        Options.compaction_filter: None
+2022/11/04-18:19:07.091096 525c        Options.compaction_filter_factory: None
+2022/11/04-18:19:07.091100 525c         Options.memtable_factory: SkipListFactory
+2022/11/04-18:19:07.091104 525c            Options.table_factory: BlockBasedTable
+2022/11/04-18:19:07.091133 525c            table_factory options:   flush_block_policy_factory: FlushBlockBySizePolicyFactory (0000015ED77817D0)
+  cache_index_and_filter_blocks: 0
+  cache_index_and_filter_blocks_with_high_priority: 1
+  pin_l0_filter_and_index_blocks_in_cache: 0
+  pin_top_level_index_and_filter: 1
+  index_type: 0
+  data_block_index_type: 0
+  index_shortening: 1
+  data_block_hash_table_util_ratio: 0.750000
+  hash_index_allow_collision: 1
+  checksum: 1
+  no_block_cache: 0
+  block_cache: 0000015ED784D480
+  block_cache_name: LRUCache
+  block_cache_options:
+    capacity : 8388608
+    num_shard_bits : 4
+    strict_capacity_limit : 0
+    memory_allocator : None
+    high_pri_pool_ratio: 0.000
+  block_cache_compressed: 0000000000000000
+  persistent_cache: 0000000000000000
+  block_size: 4096
+  block_size_deviation: 10
+  block_restart_interval: 16
+  index_block_restart_interval: 1
+  metadata_block_size: 4096
+  partition_filters: 0
+  use_delta_encoding: 1
+  filter_policy: nullptr
+  whole_key_filtering: 1
+  verify_compression: 0
+  read_amp_bytes_per_bit: 0
+  format_version: 4
+  enable_index_compression: 1
+  block_align: 0
+2022/11/04-18:19:07.091138 525c        Options.write_buffer_size: 67108864
+2022/11/04-18:19:07.091142 525c  Options.max_write_buffer_number: 2
+2022/11/04-18:19:07.091147 525c          Options.compression: LZ4
+2022/11/04-18:19:07.091151 525c                  Options.bottommost_compression: Disabled
+2022/11/04-18:19:07.091155 525c       Options.prefix_extractor: nullptr
+2022/11/04-18:19:07.091159 525c   Options.memtable_insert_with_hint_prefix_extractor: nullptr
+2022/11/04-18:19:07.091163 525c             Options.num_levels: 7
+2022/11/04-18:19:07.091166 525c        Options.min_write_buffer_number_to_merge: 1
+2022/11/04-18:19:07.091170 525c     Options.max_write_buffer_number_to_maintain: 0
+2022/11/04-18:19:07.091174 525c     Options.max_write_buffer_size_to_maintain: 0
+2022/11/04-18:19:07.091177 525c            Options.bottommost_compression_opts.window_bits: -14
+2022/11/04-18:19:07.091185 525c                  Options.bottommost_compression_opts.level: 32767
+2022/11/04-18:19:07.091189 525c               Options.bottommost_compression_opts.strategy: 0
+2022/11/04-18:19:07.091193 525c         Options.bottommost_compression_opts.max_dict_bytes: 0
+2022/11/04-18:19:07.091196 525c         Options.bottommost_compression_opts.zstd_max_train_bytes: 0
+2022/11/04-18:19:07.091200 525c         Options.bottommost_compression_opts.parallel_threads: 1
+2022/11/04-18:19:07.091204 525c                  Options.bottommost_compression_opts.enabled: false
+2022/11/04-18:19:07.091208 525c            Options.compression_opts.window_bits: -14
+2022/11/04-18:19:07.091211 525c                  Options.compression_opts.level: 32767
+2022/11/04-18:19:07.091215 525c               Options.compression_opts.strategy: 0
+2022/11/04-18:19:07.091219 525c         Options.compression_opts.max_dict_bytes: 0
+2022/11/04-18:19:07.091223 525c         Options.compression_opts.zstd_max_train_bytes: 0
+2022/11/04-18:19:07.091226 525c         Options.compression_opts.parallel_threads: 1
+2022/11/04-18:19:07.091230 525c                  Options.compression_opts.enabled: false
+2022/11/04-18:19:07.091234 525c      Options.level0_file_num_compaction_trigger: 4
+2022/11/04-18:19:07.091238 525c          Options.level0_slowdown_writes_trigger: 20
+2022/11/04-18:19:07.091241 525c              Options.level0_stop_writes_trigger: 36
+2022/11/04-18:19:07.091245 525c                   Options.target_file_size_base: 67108864
+2022/11/04-18:19:07.091249 525c             Options.target_file_size_multiplier: 1
+2022/11/04-18:19:07.091253 525c                Options.max_bytes_for_level_base: 268435456
+2022/11/04-18:19:07.091258 525c Options.level_compaction_dynamic_level_bytes: 0
+2022/11/04-18:19:07.091263 525c          Options.max_bytes_for_level_multiplier: 10.000000
+2022/11/04-18:19:07.091268 525c Options.max_bytes_for_level_multiplier_addtl[0]: 1
+2022/11/04-18:19:07.091272 525c Options.max_bytes_for_level_multiplier_addtl[1]: 1
+2022/11/04-18:19:07.091275 525c Options.max_bytes_for_level_multiplier_addtl[2]: 1
+2022/11/04-18:19:07.091279 525c Options.max_bytes_for_level_multiplier_addtl[3]: 1
+2022/11/04-18:19:07.091283 525c Options.max_bytes_for_level_multiplier_addtl[4]: 1
+2022/11/04-18:19:07.091287 525c Options.max_bytes_for_level_multiplier_addtl[5]: 1
+2022/11/04-18:19:07.091291 525c Options.max_bytes_for_level_multiplier_addtl[6]: 1
+2022/11/04-18:19:07.091294 525c       Options.max_sequential_skip_in_iterations: 8
+2022/11/04-18:19:07.091298 525c                    Options.max_compaction_bytes: 1677721600
+2022/11/04-18:19:07.091302 525c                        Options.arena_block_size: 8388608
+2022/11/04-18:19:07.091306 525c   Options.soft_pending_compaction_bytes_limit: 68719476736
+2022/11/04-18:19:07.091309 525c   Options.hard_pending_compaction_bytes_limit: 274877906944
+2022/11/04-18:19:07.091313 525c       Options.rate_limit_delay_max_milliseconds: 100
+2022/11/04-18:19:07.091317 525c                Options.disable_auto_compactions: 0
+2022/11/04-18:19:07.091322 525c                        Options.compaction_style: kCompactionStyleLevel
+2022/11/04-18:19:07.091326 525c                          Options.compaction_pri: kMinOverlappingRatio
+2022/11/04-18:19:07.091330 525c Options.compaction_options_universal.size_ratio: 1
+2022/11/04-18:19:07.091334 525c Options.compaction_options_universal.min_merge_width: 2
+2022/11/04-18:19:07.091338 525c Options.compaction_options_universal.max_merge_width: 4294967295
+2022/11/04-18:19:07.091342 525c Options.compaction_options_universal.max_size_amplification_percent: 200
+2022/11/04-18:19:07.091345 525c Options.compaction_options_universal.compression_size_percent: -1
+2022/11/04-18:19:07.091349 525c Options.compaction_options_universal.stop_style: kCompactionStopStyleTotalSize
+2022/11/04-18:19:07.091353 525c Options.compaction_options_fifo.max_table_files_size: 1073741824
+2022/11/04-18:19:07.091357 525c Options.compaction_options_fifo.allow_compaction: 0
+2022/11/04-18:19:07.091362 525c                   Options.table_properties_collectors: 
+2022/11/04-18:19:07.091366 525c                   Options.inplace_update_support: 0
+2022/11/04-18:19:07.091370 525c                 Options.inplace_update_num_locks: 10000
+2022/11/04-18:19:07.091375 525c               Options.memtable_prefix_bloom_size_ratio: 0.000000
+2022/11/04-18:19:07.091379 525c               Options.memtable_whole_key_filtering: 0
+2022/11/04-18:19:07.091383 525c   Options.memtable_huge_page_size: 0
+2022/11/04-18:19:07.091386 525c                           Options.bloom_locality: 0
+2022/11/04-18:19:07.091390 525c                    Options.max_successive_merges: 0
+2022/11/04-18:19:07.091394 525c                Options.optimize_filters_for_hits: 0
+2022/11/04-18:19:07.091398 525c                Options.paranoid_file_checks: 0
+2022/11/04-18:19:07.091401 525c                Options.force_consistency_checks: 0
+2022/11/04-18:19:07.091405 525c                Options.report_bg_io_stats: 0
+2022/11/04-18:19:07.091409 525c                               Options.ttl: 2592000
+2022/11/04-18:19:07.091413 525c          Options.periodic_compaction_seconds: 0
+2022/11/04-18:19:07.094859 525c [db\version_set.cc:4672] Recovered from manifest file:C:\Users\danid\Documents\GitHub\FivemAdminPanelV3\api\server\Panel\.fxdk\fxserver\db\default/MANIFEST-000001 succeeded,manifest_file_number is 1, next_file_number is 3, last_sequence is 0, log_number is 0,prev_log_number is 0,max_column_family is 0,min_log_number_to_keep is 0
+2022/11/04-18:19:07.094877 525c [db\version_set.cc:4681] Column family [default] (ID 0), log number is 0
+2022/11/04-18:19:07.105596 525c [db\db_impl\db_impl_open.cc:1576] SstFileManager instance 0000015ED7893B50
+2022/11/04-18:19:07.106020 525c DB pointer 0000015EC9D980E0
+2022/11/04-18:19:07.106385 67ac [db\db_impl\db_impl.cc:854] ------- DUMPING STATS -------
+2022/11/04-18:19:07.106399 67ac [db\db_impl\db_impl.cc:855] 
+** DB Stats **
+Uptime(secs): 0.0 total, 0.0 interval
+Cumulative writes: 1 writes, 1 keys, 1 commit groups, 0.5 writes per commit group, ingest: 0.00 GB, 0.00 MB/s
+Cumulative WAL: 0 writes, 0 syncs, 0.00 writes per sync, written: 0.00 GB, 0.00 MB/s
+Cumulative stall: 00:00:0.000 H:M:S, 0.0 percent
+Interval writes: 1 writes, 1 keys, 1 commit groups, 0.5 writes per commit group, ingest: 0.00 MB, 0.00 MB/s
+Interval WAL: 0 writes, 0 syncs, 0.00 writes per sync, written: 0.00 MB, 0.00 MB/s
+Interval stall: 00:00:0.000 H:M:S, 0.0 percent
+
+** Compaction Stats [default] **
+Level    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Sum      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+ Int      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+
+** Compaction Stats [default] **
+Priority    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Uptime(secs): 0.0 total, 0.0 interval
+Flush(GB): cumulative 0.000, interval 0.000
+AddFile(GB): cumulative 0.000, interval 0.000
+AddFile(Total Files): cumulative 0, interval 0
+AddFile(L0 Files): cumulative 0, interval 0
+AddFile(Keys): cumulative 0, interval 0
+Cumulative compaction: 0.00 GB write, 0.00 MB/s write, 0.00 GB read, 0.00 MB/s read, 0.0 seconds
+Interval compaction: 0.00 GB write, 0.00 MB/s write, 0.00 GB read, 0.00 MB/s read, 0.0 seconds
+Stalls(count): 0 level0_slowdown, 0 level0_slowdown_with_compaction, 0 level0_numfiles, 0 level0_numfiles_with_compaction, 0 stop for pending_compaction_bytes, 0 slowdown for pending_compaction_bytes, 0 memtable_compaction, 0 memtable_slowdown, interval 0 total count
+
+** File Read Latency Histogram By Level [default] **
+
+** Compaction Stats [default] **
+Level    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Sum      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+ Int      0/0    0.00 KB   0.0      0.0     0.0      0.0       0.0      0.0       0.0   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0
+
+** Compaction Stats [default] **
+Priority    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Uptime(secs): 0.0 total, 0.0 interval
+Flush(GB): cumulative 0.000, interval 0.000
+AddFile(GB): cumulative 0.000, interval 0.000
+AddFile(Total Files): cumulative 0, interval 0
+AddFile(L0 Files): cumulative 0, interval 0
+AddFile(Keys): cumulative 0, interval 0
+Cumulative compaction: 0.00 GB write, 0.00 MB/s write, 0.00 GB read, 0.00 MB/s read, 0.0 seconds
+Interval compaction: 0.00 GB write, 0.00 MB/s write, 0.00 GB read, 0.00 MB/s read, 0.0 seconds
+Stalls(count): 0 level0_slowdown, 0 level0_slowdown_with_compaction, 0 level0_numfiles, 0 level0_numfiles_with_compaction, 0 stop for pending_compaction_bytes, 0 slowdown for pending_compaction_bytes, 0 memtable_compaction, 0 memtable_slowdown, interval 0 total count
+
+** File Read Latency Histogram By Level [default] **

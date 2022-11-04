@@ -1,6 +1,6 @@
 const { Router } = require('express');
 const router = Router();
-var config = require('../../Config.json');
+var config = require('../../Data/Config.json');
 const fs = require('fs');
 const Errors = require('../other/errorsCode.json');
 const { dirname } = require('path');
@@ -8,6 +8,7 @@ const appDir = dirname(require.main.filename);
 const sqlFunctions = require('../sql/functions.js');
 const rconFunctions = require('../rcon/functions.js');
 const ftpFunctions = require('../ftp/functions.js');
+const logger = require('../utils/logger.js');
 
 router.post('/selectframework', (req, res) => {
     if (config[0].Setup) {
@@ -21,16 +22,16 @@ router.post('/selectframework', (req, res) => {
     }
     try {
         config[3].framework = newFramework;
-        const path = `${appDir}\\..\\Config.json`;
+        const path = `${appDir}\\..\\Data/Config.json`;
         fs.writeFile(path, JSON.stringify(config, null, "\t"), function writeJSON(err) {
-            if (err) return console.log(err);
+            if (err){
+                logger.error(`Error when trying to select framework: ${err}`); return;
+            }
             res.json({ "status": "success" });
         });
     } catch (err) {
         res.json({ "status": "bad", "errorCode": Errors[0].UnknownErrorCode })
     }
-    // console.log(res.locals.permissions)
-    // console.log(res.locals.isAuth)
 });
 
 router.post('/checkDatabase', (req, res) => {
@@ -50,11 +51,11 @@ router.post('/checkDatabase', (req, res) => {
             config[1].db_username = db.user;
             config[1].db_password = db.password;
             config[1].db_name = db.name;
-            const path = `${appDir}\\..\\Config.json`;
+            const path = `${appDir}\\..\\Data/Config.json`;
             fs.writeFile(path, JSON.stringify(config, null, "\t"), function writeJSON(err) {
                 if (err){
                     res.json({ "status": "bad", "errorCode": Errors[0].UnknownErrorCode })
-                    console.log(err);
+                    logger.error(`Error when trying to change database credentials: ${err}`);
                     return;
                 }
                 res.json({ "status": "success" });
@@ -87,11 +88,11 @@ router.post('/checkRcon', (req, res) => {
             config[7].rcon_ip = rcon.host;
             config[7].rcon_port = rcon.port;
             config[7].rcon_password = rcon.password;
-            const path = `${appDir}\\..\\Config.json`;
+            const path = `${appDir}\\..\\Data/Config.json`;
             fs.writeFile(path, JSON.stringify(config, null, "\t"), function writeJSON(err) {
                 if (err){
                     res.json({ "status": "bad", "errorCode": Errors[0].UnknownErrorCode })
-                    console.log(err);
+                    logger.error(`Error when trying to change rcon credentials: ${err}`);
                     return;
                 }
                 res.json({ "status": "success" });
@@ -121,11 +122,11 @@ router.post('/checkFtp', (req, res) => {
             config[6].ftp_port = ftp.port;
             config[6].ftp_username = ftp.username;
             config[6].ftp_password = ftp.password;
-            const path = `${appDir}\\..\\Config.json`;
+            const path = `${appDir}\\..\\Data/Config.json`;
             fs.writeFile(path, JSON.stringify(config, null, "\t"), function writeJSON(err) {
                 if (err){
                     res.json({ "status": "bad", "errorCode": Errors[0].UnknownErrorCode })
-                    console.log(err);
+                    logger.error(`Error when trying to change ftp credentials: ${err}`);
                     return;
                 }
                 res.json({ "status": "success" });
@@ -146,7 +147,7 @@ router.get('/summary', (req, res) => {
     const summary = {};
     try {
         config[0].Setup = true;
-        const path = `${appDir}\\..\\Config.json`;
+        const path = `${appDir}\\..\\Data/Config.json`;
         fs.readFile(path, 'utf8', (err, data) => {
             if (err) {
                 console.error(err);
@@ -180,9 +181,11 @@ router.get('/finish', (req, res) => {
     }
     try{
         config[0].Setup = true;
-        const path = `${appDir}\\..\\Config.json`;
+        const path = `${appDir}\\..\\Data/Config.json`;
         fs.writeFile(path, JSON.stringify(config, null, "\t"), function writeJSON(err) {
-            if (err) return console.log(err);
+            if (err){
+                logger.error(`Error when trying to finish the config: ${err}`); return;
+            }
             obj = {"username": "panel@panel.com", "password": "panel1234"};
             res.json({ "status": "success", "default_account": obj});
         });

@@ -1,5 +1,6 @@
 const ftp = require("basic-ftp");
-const config = require('../../Config.json');
+const config = require('../../Data/Config.json');
+const logger = require('../utils/logger.js');
 
 const CheckFtpConnection = function(credentials){
     return new Promise(function(resolve, reject){
@@ -38,7 +39,7 @@ async function GetFileList(path) {
         return await client.list()
     }
     catch(err) {
-        console.log(err)
+        logger.error(`Error trying to connect to ftp: ${err}`);
     }
     client.close()
 }
@@ -57,7 +58,7 @@ async function UploadFile(folderPath) {
         await client.uploadFromDir('./server/panel_script')
     }
     catch(err) {
-        console.log(err)
+        logger.error(`Error trying to connect to ftp: ${err}`);
     }
     client.close()
 }

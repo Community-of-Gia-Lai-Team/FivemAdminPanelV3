@@ -13,7 +13,6 @@ const makeQuery = function(query){
 
 const checkDatabase = function(credentials){
     return new Promise(function(resolve, reject){
-        console.log(credentials);
         const conn = mysql.createConnection({
             host: credentials.host,
             user: credentials.user,

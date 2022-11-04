@@ -1,6 +1,6 @@
 const cookieParser = require('cookie-parser')
 const auth = require('./Validator/auth.js');
-const config = require('../../Config.json');
+const config = require('../../Data/Config.json');
 const Enum = require('enum');
 
 //Check if token is valid, if is not valid return error code based in other/errosCode.json
@@ -18,10 +18,16 @@ module.exports = function () {
                 var isAuth = false;
                 const cookieValue = data[key]
                 auth.ValidateToken(cookieValue).then(function(data){
-                    res.locals.auth = isAuth;
+                    res.locals.isAuth = isAuth;
                     if(data){
                         auth.GetDataFromToken(cookieValue).then(function(data2) {
                             res.locals.permissions = data2[0].Permission;
+                            res.locals.username = data2[0].Username;
+                            res.locals.password = data2[0].Password;
+                            res.locals.joinDate = data2[0].JoinedDate;
+                            res.locals.createdBy = data2[0].CreatedBy;
+                            res.locals.isDesktop = data2[0].isDesktop;
+                            res.locals.isOnline = data2[0].isOnline;
                             res.locals.token = cookieValue;
                             res.locals.isAuth = true;
                             next();

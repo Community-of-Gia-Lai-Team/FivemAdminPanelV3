@@ -1,9 +1,18 @@
 const crypto = require('crypto');
 const sqlFunctions = require('../../sql/functions.js');
+const md5 = require('md5');
 
 const Login = function(username, password){
     return new Promise(function(resolve, reject){
         sqlFunctions.makeQuery(`SELECT ID, Permission FROM panel_users WHERE Username='${username}' AND Password='${password}'`).then(data => {
+            resolve(data.result)
+        })
+    });
+}
+
+const Register = function(username, password, permissions, admin){
+    return new Promise(function(resolve, reject){
+        sqlFunctions.makeQuery(`INSERT INTO panel_users (Username, Password, Permission, CreatedBy) VALUES ('${username}', '${md5(password)}', '${permissions}', '${admin}')`).then(data => {
             resolve(data.result)
         })
     });
@@ -36,6 +45,14 @@ const GenerateTokenHash = function(obj){
     });
 }
 
+const UserExists = function(username){
+    return new Promise(function(resolve, reject){
+        sqlFunctions.makeQuery(`SELECT ID FROM panel_users WHERE Username='${username}'`).then(data => {
+            resolve(data.result.length > 0)
+        })
+    });
+}
+
 const ValidateToken = function(token){
     return new Promise(function(resolve, reject){
         sqlFunctions.makeQuery(`SELECT ID FROM panel_users WHERE Token='${token}'`).then(data => {
@@ -62,4 +79,4 @@ const GetDataFromToken = function(token){
     });
 }
 
-module.exports = { ValidateToken, GenerateTokenHash, RemoveToken, GetDataFromToken, Login }
+module.exports = { ValidateToken, GenerateTokenHash, RemoveToken, GetDataFromToken, Login, UserExists, Register }

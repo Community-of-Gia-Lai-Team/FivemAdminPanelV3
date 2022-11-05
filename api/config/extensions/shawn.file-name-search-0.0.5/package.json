@@ -1,0 +1,94 @@
+{
+	"name": "file-name-search",
+	"displayName": "File Name Search",
+	"description": "Quickly search file name over all files.",
+	"version": "0.0.5",
+	"publisher": "Shawn",
+	"icon": "images/logo.png",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ShawnLin013/vscode-file-name-search.git"
+	},
+	"engines": {
+		"vscode": "^1.34.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:extension.searchFileName",
+		"onCommand:extension.searchFileName.matchCase",
+		"onCommand:extension.searchFileName.matchWholeWord",
+		"onCommand:extension.searchFileName.matchCaseAndWholeWord"
+	],
+	"main": "./extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.searchFileName",
+				"title": "%extension.searchFileName%"
+			},
+			{
+				"command": "extension.searchFileName.matchCase",
+				"title": "%extension.searchFileName.matchCase%"
+			},
+			{
+				"command": "extension.searchFileName.matchWholeWord",
+				"title": "%extension.searchFileName.matchWholeWord%"
+			},
+			{
+				"command": "extension.searchFileName.matchCaseAndWholeWord",
+				"title": "%extension.searchFileName.matchCaseAndWholeWord%"
+			}
+		],
+		"menus": {
+			"explorer/context": [
+				{
+					"command": "extension.searchFileName",
+					"group": "4_search"
+				},
+				{
+					"command": "extension.searchFileName.matchCase",
+					"group": "4_search"
+				},
+				{
+					"command": "extension.searchFileName.matchWholeWord",
+					"group": "4_search"
+				},
+				{
+					"command": "extension.searchFileName.matchCaseAndWholeWord",
+					"group": "4_search"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "node ./node_modules/vscode/bin/test"
+	},
+	"dependencies": {
+		"copy-paste": "^1.3.0"
+	},
+	"devDependencies": {
+		"@types/node": "^12.12.0",
+		"@types/vscode": "^1.34.0",
+		"@typescript-eslint/eslint-plugin": "^3.0.2",
+		"@typescript-eslint/parser": "^3.0.2",
+		"eslint": "^7.1.0",
+		"typescript": "^4.0.2",
+		"mocha": "^8.1.3",
+		"@types/mocha": "^8.0.3"
+	},
+	"__metadata": {
+		"id": "a1b2e2d4-3397-40a7-8c0c-e0c3c59f4ef2",
+		"publisherId": "95b47f42-eda5-40fb-8e4e-cf5ecb8182fb",
+		"publisherDisplayName": "Shawn",
+		"targetPlatform": "undefined",
+		"isApplicationScoped": false,
+		"updated": false,
+		"isPreReleaseVersion": false,
+		"installedTimestamp": 1666816987109,
+		"preRelease": false
+	}
+}

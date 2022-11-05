@@ -1,0 +1,2 @@
+C:\Users\{username}\AppData\Roaming\Code\User\settings.json
+C:\Users\{username}\.vscode

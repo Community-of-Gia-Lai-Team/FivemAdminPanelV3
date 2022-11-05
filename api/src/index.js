@@ -20,8 +20,8 @@ app.set('json spaces', 2);
 //middlewares
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
-app.use(cookieParser())
-app.use(mdw())
+app.use(cookieParser());
+app.use(mdw());
 app.use(cors({
     origin: '*'
 }));
@@ -33,6 +33,7 @@ app.use('/api/', require('./routes/register.js'));
 app.use('/api/setup/', require('./routes/setup.js'));
 app.use('/api/', require('./routes/screenshot.js'));
 app.use('/api/installation/', require('./server-script.js'));
+app.use('/api/', require('./routes/tickets.js'));
 
 console.log(chalk.magenta(`
 _______    ______   __    __  ________  __       
@@ -51,4 +52,4 @@ $$/       $$/   $$/ $$/   $$/ $$$$$$$$/ $$$$$$$$/
 app.listen(config[0].ApiPort, () => {
     logger.info(`API listening on port: ${config[0].ApiPort}`);
     websocket.StartSocket(config[0].WsPort);
-})
+});

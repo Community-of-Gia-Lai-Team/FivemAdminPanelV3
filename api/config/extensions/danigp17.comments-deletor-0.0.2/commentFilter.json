@@ -1,0 +1,98 @@
+{
+    "python": {
+        "label": "python",
+        "small": "#",
+        "largeInit": "\"\"\"",
+        "largeEnd": "\"\"\""
+    },
+    "javascript": {
+        "label": "javascript",
+        "small": "//",
+        "largeInit": "/*",
+        "largeEnd": "*/"
+    },
+    "typescript": {
+        "label": "typescript",
+        "small": "//",
+        "largeInit": "/*",
+        "largeEnd": "*/"
+    },
+    "cpp": {
+        "label": "cpp",
+        "small": "//",
+        "largeInit": "/*",
+        "largeEnd": "*/"
+    },
+    "c": {
+        "label": "c",
+        "small": "//",
+        "largeInit": "/*",
+        "largeEnd": "*/"
+    },
+    "go": {
+        "label": "go",
+        "small": "//",
+        "largeInit": "/*",
+        "largeEnd": "*/"
+    },
+    "csharp": {
+        "label": "csharp",
+        "small": "//",
+        "largeInit": "/*",
+        "largeEnd": "*/"
+    },
+    "shell": {
+        "label": "shell",
+        "small": "#",
+        "largeInit": ": '",
+        "largeEnd": "'"
+    },
+    "rust": {
+        "label": "rust",
+        "small": "//",
+        "largeInit": "/*",
+        "largeEnd": "*/"
+    },
+    "java": {
+        "label": "java",
+        "small": "//",
+        "largeInit": "/*",
+        "largeEnd": "*/"
+    },
+    "html": {
+        "label": "html",
+        "small": "<!--",
+        "largeInit": "<!--",
+        "largeEnd": "-->"
+    },
+    "php": {
+        "label": "php",
+        "small": "//",
+        "largeInit": "/*",
+        "largeEnd": "*/"
+    },
+    "ruby": {
+        "label": "ruby",
+        "small": "//",
+        "largeInit": "/*",
+        "largeEnd": "*/"
+    },
+    "lua": {
+        "label": "lua",
+        "small": "--",
+        "largeInit": "--[[",
+        "largeEnd": "--]]"
+    },
+    "css": {
+        "label": "css",
+        "small": "/*",
+        "largeInit": "/*",
+        "largeEnd": "*/"
+    },
+    "scss": {
+        "label": "scss",
+        "small": "/*",
+        "largeInit": "/*",
+        "largeEnd": "*/"
+    }
+}

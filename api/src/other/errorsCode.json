@@ -17,5 +17,10 @@
     "CantFindScreenshotID": 15,
     "WebsocketDisconnected": 16,
     "InvalidLogin": 17,
-    "PasswordOrUsernameCantBeEmpty": 18
+    "PasswordOrUsernameCantBeEmpty": 18,
+    "NotLoged": 19,
+    "MissingPermissions": 20,
+    "UserAlreadyExist": 21,
+    "MissingSteamTicket": 22,
+    "MissingTicketData": 23
 }]

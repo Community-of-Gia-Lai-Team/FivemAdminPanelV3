@@ -1,0 +1,8 @@
+{
+    "workbench.iconTheme": "material-icon-theme",
+    "window.zoomLevel": 1,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "git.enableSmartCommit": true,
+    "window.commandCenter": true,
+    "workbench.colorTheme": "Shades of Purple (Super Dark)"
+}

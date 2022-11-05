@@ -1,0 +1,57 @@
+{
+	"name": "comments-deletor",
+	"displayName": "Comments Deletor",
+	"description": "Remove all comments in current file",
+	"version": "0.0.2",
+	"publisher": "DaniGp17",
+	"author": {
+		"name": "Daniel Gallego Pinilla"
+	},
+	"icon": "logo-extension.png",
+	"license": "GPLv3",
+	"engines": {
+		"vscode": "^1.71.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:comments-deletor.removeComments"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "comments-deletor.removeComments",
+				"title": "Remove File Comments"
+			}
+		]
+	},
+	"scripts": {
+		"lint": "eslint .",
+		"pretest": "npm run lint",
+		"test": "node ./test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.71.0",
+		"@types/glob": "^7.2.0",
+		"@types/mocha": "^9.1.1",
+		"@types/node": "16.x",
+		"eslint": "^8.20.0",
+		"glob": "^8.0.3",
+		"mocha": "^10.0.0",
+		"typescript": "^4.7.4",
+		"@vscode/test-electron": "^2.1.5"
+	},
+	"__metadata": {
+		"id": "5bf7ee54-4298-4776-ba10-25e01c9093d7",
+		"publisherId": "82162650-0e4b-4653-a570-d345fa96bd5c",
+		"publisherDisplayName": "DaniGp17",
+		"targetPlatform": "undefined",
+		"isApplicationScoped": false,
+		"updated": false,
+		"isPreReleaseVersion": false,
+		"installedTimestamp": 1666375190168,
+		"preRelease": false
+	}
+}

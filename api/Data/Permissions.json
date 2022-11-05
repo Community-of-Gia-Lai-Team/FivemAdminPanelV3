@@ -1,3 +1,7 @@
 [{
-    
+    "CreateOtherUsers": 5,
+    "SeeStaffList": 5,
+    "SeeLastTickets": 1,
+    "SeeTicketsOfUser": 1,
+    "CreateTickets": 1
 }]

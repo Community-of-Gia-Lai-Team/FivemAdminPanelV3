@@ -22,5 +22,6 @@
     "MissingPermissions": 20,
     "UserAlreadyExist": 21,
     "MissingSteamTicket": 22,
-    "MissingTicketData": 23
+    "MissingTicketData": 23,
+    "StaffMissingData": 24
 }]

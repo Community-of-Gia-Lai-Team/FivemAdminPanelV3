@@ -9,7 +9,7 @@
 		"db_port": "3306",
 		"db_username": "root",
 		"db_password": "",
-		"db_name": "panel"
+		"db_name": "ng_basev2"
 	},
 	{
 		"cookieName": "panel_ssid"

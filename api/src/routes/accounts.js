@@ -35,6 +35,10 @@ router.post('/login', (req, res) => {
 });
 
 router.get('/getStaffList', (req, res) => {
+    if(!res.locals.isAuth){
+        res.json({ "status": "bad", "errorCode": Errors[0].NotLoged });
+        return;
+    }
     if(res.locals.permissions < Perms[0].SeeStaffList){
         res.json({ "status": "bad", "errorCode": Errors[0].MissingPermissions });
         return;

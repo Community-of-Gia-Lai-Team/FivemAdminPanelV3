@@ -15,10 +15,10 @@ router.post('/createAdmin', (req, res) => {
     const { username, password, permission} = req.body;
     console.log(username, password, permission)
     if(username == '' || username == undefined || password == '' || password == undefined || permission == '' || permission == undefined){
-        res.json({ "status": "bad", "errorCode": Errors[0].RegisterMissingData })
+        res.json({ "status": "bad", "errorCode": Errors[0].StaffMissingData })
         return;
     }
-    if(res.locals.permissions == undefined){
+    if(!res.locals.isAuth){
         res.json({ "status": "bad", "errorCode": Errors[0].NotLoged });
         return;
     }

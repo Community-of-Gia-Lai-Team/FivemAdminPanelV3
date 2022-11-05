@@ -29,6 +29,10 @@ setInterval(() => {
 
 router.post('/GetScreenshot', (req, res) => {
     const { id } = req.body;
+    if(!res.locals.isAuth){
+        res.json({ "status": "bad", "errorCode": Errors[0].NotLoged });
+        return;
+    }
     serverFunctions.CheckID(id).then(function(value, err){
         if(!value){
             res.json({ "status": "bad", "errorCode": Errors[0].CantFindPlayerID })
@@ -40,6 +44,10 @@ router.post('/GetScreenshot', (req, res) => {
 });
 
 router.post('/GetScreenshotStatus', (req, res) => {
+    if(!res.locals.isAuth){
+        res.json({ "status": "bad", "errorCode": Errors[0].NotLoged });
+        return;
+    }
     const { scrID } = req.body;
     if(scrID == null || scrID == undefined){
         res.json({ "status": "bad", "errorCode": Errors[0].CantFindScreenshotID });

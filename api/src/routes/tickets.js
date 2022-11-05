@@ -7,6 +7,10 @@ const Errors = require('../other/errorsCode.json');
 const logger = require('../utils/logger.js')
 
 router.get('/RecentTickets', (req, res) => {
+    if(!res.locals.isAuth){
+        res.json({ "status": "bad", "errorCode": Errors[0].NotLoged });
+        return;
+    }
     if(res.locals.permissions < Perms[0].SeeLastTickets){
         res.json({ "status": "bad", "errorCode": Errors[0].MissingPermissions });
         return;
@@ -28,6 +32,10 @@ router.get('/RecentTickets', (req, res) => {
 })
 
 router.post('/TicketsFromUser', (req, res) => {
+    if(!res.locals.isAuth){
+        res.json({ "status": "bad", "errorCode": Errors[0].NotLoged });
+        return;
+    }
     if(res.locals.permissions < Perms[0].SeeTicketsOfUser){
         res.json({ "status": "bad", "errorCode": Errors[0].MissingPermissions });
         return;
@@ -54,6 +62,10 @@ router.post('/TicketsFromUser', (req, res) => {
 });
 
 router.post('/CreateTicket', (req, res) => {
+    if(!res.locals.isAuth){
+        res.json({ "status": "bad", "errorCode": Errors[0].NotLoged });
+        return;
+    }
     if(res.locals.permissions < Perms[0].CreateTickets){
         res.json({ "status": "bad", "errorCode": Errors[0].MissingPermissions });
         return;

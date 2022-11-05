@@ -28,7 +28,7 @@ app.use(cors({
 
 //routes
 app.use('/api/', require('./routes/accounts.js'));
-app.use('/api/', require('./routes/routes.js'));
+app.use('/api/', require('./routes/esx/routes.js'));
 app.use('/api/', require('./routes/register.js'));
 app.use('/api/setup/', require('./routes/setup.js'));
 app.use('/api/', require('./routes/screenshot.js'));

@@ -23,5 +23,6 @@
     "UserAlreadyExist": 21,
     "MissingSteamTicket": 22,
     "MissingTicketData": 23,
-    "StaffMissingData": 24
+    "StaffMissingData": 24,
+    "MissingDataSearchUser": 25
 }]

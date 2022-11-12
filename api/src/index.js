@@ -34,6 +34,7 @@ app.use('/api/setup/', require('./routes/setup.js'));
 app.use('/api/', require('./routes/screenshot.js'));
 app.use('/api/installation/', require('./server-script.js'));
 app.use('/api/', require('./routes/tickets.js'));
+app.use('/api/', require('./routes/gen/main.js'));
 
 console.log(chalk.magenta(`
 _______    ______   __    __  ________  __       
